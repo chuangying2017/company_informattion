@@ -9,6 +9,22 @@ Base = declarative_base()
 engine = create_engine('mysql+pymysql://newuser:newuser@localhost:3306/data_erp')
 
 
+def init_connect():
+    global engine
+
+    # 创建DBSession类型:
+    DBSession = sessionmaker(bind=engine)
+
+    session = DBSession()
+
+    return session
+
+
+def operation_complete(session):
+    session.commit()
+    session.close()
+
+
 # 定义User对象:
 class Company(Base):
     # 表的名字:
@@ -25,27 +41,12 @@ class Company(Base):
     email = Column(String(25), comment='邮箱')  # 邮箱
     address = Column(String(255), comment='公司地址')  # 公司地址
     introduction = Column(String(1000), comment='公司介绍')  # 公司介绍
-    register_address = Column(String, comment='注册地址')  # 注册地址
+    register_address = Column(String(255), comment='注册地址')  # 注册地址
     business_scope = Column(String(1000), comment='经营范围')  # 经营范围
     industry = Column(String(100), comment='行业')  # 行业
-    staff_size = Column(String, comment='人员规模')  # 人员规模
-    former_name = Column(String, comment='曾用名')  # 曾用名
-    business_term = Column(String, comment='营业期限')  # 营业期限
-    date_of_approval = Column(String, comment='审核日期')  # 审核日期
-    company_type = Column(String, comment='公司类型')  # 公司类型
+    staff_size = Column(String(255), comment='人员规模')  # 人员规模
+    former_name = Column(String(255), comment='曾用名')  # 曾用名
+    business_term = Column(String(255), comment='营业期限')  # 营业期限
+    date_of_approval = Column(String(255), comment='审核日期')  # 审核日期
+    company_type = Column(String(255), comment='公司类型')  # 公司类型
 
-
-
-
-
-def init_db(egine=None):
-    Base.metadata.create_all(egine)
-
-
-init_db(engine)
-# 创建DBSession类型:
-DBSession = sessionmaker(bind=engine)
-
-session = DBSession()
-
-session.commit()
