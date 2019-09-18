@@ -1,0 +1,882 @@
+ <!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"> <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> <meta name="renderer" content="webkit"> <meta name="author" content="leslie"> <title>东莞公司的搜索结果-企查查</title> <meta name="keywords" content="企查查,企业查询,公司查询,工商查询,企业信用信息查询系统,企业工商信息查询平台,企业财务信息查询,企业信用评价查询,企业纠纷查询,企业现金流查询,企业股权查询,企业负债查询,企业资产查询,企业财报查询,企业失信信息查询,启信宝,天眼查,天眼通"> <meta name="description" content="企查查信息来自国家企业信用信息公示系统，提供企业信息查询,工商查询,企业信用评价查询，企业纠纷查询，企业现金流查询，企业股权查询，企业负债查询，企业资产查询，企业财报查询,公司查询等相关信息查询；帮您快速了解企业信息,企业工商信息,企业信用信息等经营和人员投资状况！"> <link rel="icon" href="/material/theme/chacha/cms/v2/images/favicon.png"> <link rel="stylesheet" href="/material/theme/chacha/cms/v2/css/bootstrap.css" type="text/css" /> <link rel="stylesheet" href="/material/theme/chacha/cms/v2/css/font-awesome.min.css" type="text/css" /> <link rel="stylesheet" href="/material/theme/chacha/cms/v2/css/icon.css" type="text/css" /> <link rel="stylesheet" href="/material/theme/chacha/cms/v2/css/font.css" type="text/css" /> <link rel="stylesheet" href="/material/theme/chacha/cms/v2/css/app.css?time=1568790807" type="text/css" /> <link rel="stylesheet" href="/material/theme/chacha/cms/v2/css/common.css?time=1568790807" type="text/css" /> <link rel="stylesheet" href="/material/theme/chacha/cms/v2/css/nuser.css?time=1568790807" type="text/css" /> <link rel="stylesheet" href="/material/theme/chacha/cms/pro/css/simple-line-icons.css" type="text/css" /> <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/material/theme/chacha/cms/v2/css/app_ie8.css?time=1508428800" type="text/css" />
+    <script src="/material/theme/chacha/cms/v2/js/html5shiv.js"></script>
+    <script src="/material/theme/chacha/cms/v2/js/respond.js"></script>
+    <![endif]--> <script type="text/javascript" src="/material/js/siteconfig.js?time=1568790807"></script> <script src="/material/theme/chacha/cms/v2/js/jquery.min.js"></script> <script type="text/javascript" src="/material/theme/chacha/cms/v2/js/qrcode.min.js"></script> <script type="text/javascript" src="/material/theme/chacha/cms/v2/js/jquery.scrollTo.js"></script> <script type="text/javascript" src="/material/theme/chacha/cms/v2/js/jquery.qrcode.min.js"></script> <script src="/material/theme/chacha/cms/v2/js/bootstrap.js"></script> <script type="text/javascript" src="/material/js/echarts.min.js"></script> <script type="text/javascript" src="/material/theme/chacha/cms/v2/js/china.js?time=1508428800"></script> <script type="text/javascript" src="/material/theme/chacha/cms/v2/js/chartsUtil.js?time=1568790807"></script> <script type="text/javascript" src="/material/theme/chacha/cms/v2/js/kslide.js?time=1568790807"></script> <script type="text/javascript" src="/material/theme/chacha/cms/v2/js/searchList.js?time=1568790807"></script> <script type="text/javascript" src="/material/theme/chacha/cms/v2/js/phoneSelect.js?time=1568790807"></script> <script src="/material/theme/chacha/cms/v2/js/slimscroll/jquery.slimscroll.min.js"></script> <link rel="stylesheet" href="/material/theme/chacha/cms/v2/css/toastr.css?time=1568790807" /> <script type="text/javascript" src="/material/theme/chacha/cms/v2/js/moment.js"></script> <script src="/material/theme/chacha/cms/v2/js/toastr.js" type="text/javascript"></script> <script src="/material/theme/chacha/cms/v2/js/custom.js?time=1568790807"></script> <script type="text/javascript" src="/material/theme/chacha/cms/v2/js/zhuge.js?time=1568790807"></script> <script type="text/javascript">
+        var userId = '';
+    var userGroupid = '';
+    var freeCompanies = ["6c9578571a5e4691e057e1948cb7a9ea","648b186edd43ea86fbf4fa73878d3bf9","bb30c8c4237cf1010cf14a774c31ccec","778db501c7f62a6dfd10f465b19b10a7","ed6261a5a04533487e8720817db3b3d9","1a1485a7410a1cc22afac4da7180e9c2","27bee7878a9a1b42a5fbd6aa22947197","6cf52a1cca85fc1a7ed02f452189dced","6b4c59135178dd4caaa10d612f9f49fc","9f26b9973a474261fd1c182980f582e0","9d19a1b84618fb52cd11fcbffc301fc2","a06cb3ca477c0f7d53a394a47f8205d2","296a61ebb98e73a4d04b17124e62be15","63c6bec1ca6aafce2af001ee2c9af3d0","0a06433c293bc3352eff2aeaa812c363","a6afc3c6bea93c764faf69cb1d6698b8","576c21e3468a6b178bbf291e4820e896","63c6bec1ca6aafce2af001ee2c9af3d0","568da2a0d368a4d163f82555f2e8fa2d","f1016e220de1224a415fc53832a0cada","89c2a88235235fd13dc44965adc8fe51","e70c73e5715aae5c1ff1bb388fd93cca","f7bb74a1ab516dfe744086dadfce88db","4d6268651efc3d50576947f59bbb05ab","8fa2c72f0c4ca3b0b4a3613c8c1742f5","175b80965197eee67076ae745c2e91c7","c34bd2aa34e8ff3a21263936eb070c25","4c5df1b087671c1a2dae3ea706f86f17","c4a99a72d080abcee4c9d8fe95207e74","9478821ec477438c65368f8aef0fbf40","2e0f58235589e25df3bd7420ca2f1463","682c68755f666a82fb36a1eb88885508","bdf25f57f1c4a2e49b20bfde01fa6110","8bc4d161e35a9d7f6b281a52b9549def","5504ef285b07cad4facc981764680df7","925dbc0e90303842aa02132a18e9da71","f8e57005a1992ef4c8cd3453432a7e30","e97518ce74bd9675ac2a9e4419f5525e","925dbc0e90303842aa02132a18e9da71","22fa3a8fd77654bb2fe1ede1964d1d56","19fd0eedbc8a7d49f688844faa82444a","7581c856d70f90cc9d81130782e46ccc","1ee9c8c921c38fc83a0be01bc1a8b8e8","72463d6bc84ee8c7a4582a4b879a65b7","bfd47c2c7161f62aecfc8ffd275a6190","83baa976bab6b1dfd563215d6ebab7d2","f0420ee021e0ffa6ecdf4470215f9592","561b327281de903b19bb458772446bfe","ff3aac2898ef5e5f12f3d31032898c7c","fa3d9de6fd3ccf354b5ae34c38eb7587","9cce0780ab7644008b73bc2120479d31"];
+    var freePeople = ["p565ceef2906318394fa45d46cdb18a8","pb3cc3d6e608758fad83c053f6f7d8f1","p476184110a69c8ab1e6f1bf32506f07","p3483c261f318de061fb3ded0508bf90","peff4efbd8aaa94d852a42d6bd4f622e","pc4eb763297cf4b8076c2e0d2fe64617","p03d87fd320f2167380bf07ac16794e9","p077472cd738bf6c70d757a42c6acaf4","p2dc826c24f06db3e6cb207b2a494533","p7b171afb629657b151c43bf3e718155","pe19e4c219613e43e5ef8816e3b34291","pf7f4dc246a163ec4a2eedbb67764f7f","paf1c4d41c4c9dcba9a7b1c986957935","pc76b9853c3325d7b5ea9d8af2fa0fca","pd24f0e6c29ec7afe56cac57d665a70b","pfffdf5c707f4ba7162eebd404630418","p51425b4e76d82435b0dfb1192bc5deb","p80a2115e4c716ca032ced9f007af2c8","p8b780c0b5697bb1daa669804aa071d9","p91f92d0f783be4faba5935904f6e2e1","p9fa343b3bb5216b246c72aeb77bce0c","pf38ddce3220b4e7c2c7ead12a534403","pbaffdb371282141ce912ea1ba440bcd","p50ccd2810b29b8f5ea618cee02ed02e","p7a226f4f0462f27a7ec88903ed5f90a","p33f9ba51dbd068643200f2315655900","pf26740c52b73dbc30c0b8bd40a38021","p441efd3807a065c24de74b5b4be3b5d","pbd14c1a830af087a22e664b211111a2","p089070bd9e914e774ef3e95d00ec5b0","p443d6a190278796f7930982dfe73f42","p202afa75ec282beabae2dd5d1f8e521","p2f4391f2600fcc10442c8f22606be20","p146c9f00d63c0fc5e1d4634c917889e","pd260c6712ed49ee88504a64c5ed9482","p347ca283005d596e26b5705fe3e5424","p25fe19b03899303d307235eaa471916","pr51b8951f1049973a8ba758266b6779","p871b2ad73b8b07e3997b0db7fcf9772","p67d2355b8ca06b442eda7b5a55b4803","p226df53c2baa849d6934a9089085ebf","pc0afc496a38fb16121ba654241bee5b","pc4a47cfe2e67199a3c45d9f8c40e1c0","p593208d3aa8e49707325de214a8cb60","p557b82fef8b08e481aadb65085b008b","p04609ece9fe504be41433742c1bf3eb","p522e021cee9336bfb6097250baa3e1b","p568dbf4e82ed6effd2ea1682c7943b8","p089070bd9e914e774ef3e95d00ec5b0","p82222ef85bfd379a8e5226dadc543dd","p684b3f0c79b5dfe6d8a290ba66e798a","p287aa836f4e2c3c6597d09f37731f85","p858a1f2f2e7864fac8d3acce4c8bb8f","p8cb6c16db2ea8fac8ecaadefe35ff8b","p6b2cf613dd4772da8ff3a9575eec8bf","p0b1f20c4c28963ace6eff596cbb7214","pfd208a680dc4871736b7001274ba8f0","pdd3325c48473fcd64180921d82ead80","pbbefb7a246f4e86a033713e889f9674","pe366442cb673caf54889e6df853e0c0","pf6ea929da129db627bfcf9bf48edc65","p1856f2582e91cf6869be9652cf91512","pde0ba11f9cc81e8e22b89d378dd597b","pc127c37072772dabd4865bd62459891","pe919b2bf2e9c6cdd24d8b63f5969fdd","p1db0b9e274d3e70dd9a2334ad82b93b","p38b6a9f4201932948f613f90ab24cdd","p0e6f9e9a26a0e41c4a3f9be7c062ef2","p9070853c3d33d38134c64a156989284","pbccd0d3eb5ada9952e52772f9e54ebe","p79bb7b0dd3f36e6e5f5100c4e3235a9","pr9c47cb6b2a96048c1d49d1ec72b3c7","p89c2161a36e89cd81bc47424c28ae5b","pae9614885f6fe1df986a5657337915a","p32d88b0b48cd2bbcd9d4f29b1b1670d","p375870fa646d110dde4fbe356f1913e","p0d43bf24ced3d482947792b410b3892","p2766646c26fb8bf53f01c17c0cd1a7e","peabcad582bff5cc35feddb8a2dca458","p9e7818eb8ffc10380ddeb37549c3594","p62f5e7603c2870f0316e439db89d33e","p8bb365678cceb173c3f6645fac32463","pd7d02c68b11c928bc5c5f3f68a43bd8","pd99973e6e867199057f35891f10ece9","p5bc1e3c3f62ed3437786bc969600b9a","pdc2b7a3cc2c414b3910a1d9e116567a","pa884808a0e7526dd17a682739cb38ec","p0b093ef01998ca26f345d4231003a9b","p6abbf243fc5557f96d4488fde8a89f5","pa85a527d51f75da260083b1cf98da24","p24129f60d16a9d20e70f29452341dec","p507f1693d86036364ec3b5b4d3c0639","p60d00d52bf712741e2fc7f435a31302","p4609f5b766b75d4ab09180fa954da02","p6da28fd74891226f20838f3900fad36","pa43fd5c3172044465f25069df6e61b8","pbfd190fa68be5988ff53ae9c1fb75e7","p189c9b0f7e004118b9484f47e6cda68","pcbfd37ad2a2598da9a6b5de289835dd","p96fe6a8b395b31912ecb7e1f41f23b0","pea5ac417585edc0effd7d23406510da","pd57e12ca20e0096dfea61993dfe48f8","p03cf330a686332cfe9cb8f36a8f3ab8","p8ca4283fb80cf988920545e99aef3a4","p1910534b4ae98fea35ddbeb1d61cd44","pf3b1bf00922bac873eec7950cecec88","pb5d99e1912cf2b87f96c7fdaa129ebe","pb6f2f51a297e57acd8a8a161a6a28bc","p131e16ad01343fa580933ad37cd33cb","p70e7789ba2d4e8172cc4fec474711fb","p6609596e149d5bc0201a0b9f4e4fcb7","pb7beff14c56b6f216f92ad95d874f51","pad06603add12c231e78caab20a05f6c","p411cb5d3d6a3399aa210df8845090ea","pf614487a898ad76c39ec0fc65ec3d4f","p954d6bbb51b05a8b3f91e51e79901a9","p5b288352cf3b9499b9271bf888008df","p0ca25440e7114c5974d01d583e52b00","pc747a2d6aaa24efad55793147bc7987","p2a2c9a1417dfff19e607aa3b30787b9","p44cb4832f4146f286a2c5c4ab4ef673","p7cb6f77da9f15766cb65765761c9d19","p38bfd08992f02ba2a136ca892d62899","pd05b697b081dcb4e66719032c2cc760","p61fbfc3a108d8efaf565de1306e23a0","p21c63257afca04e61ff32ac5580572a","p1ec3c35fa9051d8723047b80453ae69","p9d9efeb5aa665dbe66525ced8158f90","pb0489d8530decee9a061f3be5732844","p4bcf05c17b1b0918890fe3a5e64d41f","pfa52806be628929568e0dcbd943d57e","p18da2d9c2244c6dba4180f0d38a7716","p30833a0589ab2f56f93bd113bbaf9bd","pdd9194581da5dda4f700baebc44cc31","pf21af25ef345c47daa9e738732edfa6","pe553922ca919d6a7258c4056e2ab6b7","p7737993e45432ed0e721b28267e058a","p6fb279283ceeba19fe9e85acf4c1f7e","p784a2184d94be1818b6d522b5c8a9d9","pd9751940a8bdcf373ae27804f29c12a","pa313dc90dffce21f98187ca8b1eaa15","p8c945c9f031c2fa391208aeb9a63777","pf1e6aed975eb577cb46d51ac7ec3f14","pb85b223185323f8cc668b7146ddaba9","p4b2c9d74f0a53dc7834fb9aaed58bfd","p84c368f313b4d0808e3fb8ca36e10ad","p917b446e33f719e683fa127465c03bc","p14811e6d3e3c6380ce34dc64d6bb0c2","p325ad0d3c574b124e802f3ad612b7bd","pb46f67ed928d48c6f59af057ca64fcf","pc5e58ea25a0966d860efa862e64a4b3","p0cf2da4ed6ccd9fff31cd232bd3a795","p2bf510b2944458716d0a263913866f1","p2bfa369c340fc42e4c408a98f0a1f26","p4f92d97100bd868d73fa62e9ce00b28","p592a5a06fd6d1ffa4a204e0c499de24","pa289f26dbfa128c37beb57b793edc79","pf410cc5e6bf73d7a117de49a7b1af5e","p2c045fc38d5bec1d438cc581e0f86a4","p89043bad02f62e899855bceb1f7c71b","pr4c963d26e89c8fff17daf449668e16","p8cf7445cd8c5956c7480f1d507b2cd1","p885609c358d14e07fd99d41ed314e99","p57180cc2a70271694f52740d0d9ae1b","p4a6bb86866883881d5f7005f861f7a4","p57153b6ab8750d1dfd32b0c56f398d1","p556225ea3e000a06e4a35f2bdf18481","p1c907e22aaff36740ea8f603b901b32","p412cd235e5252a1c8b90705bf19fbcb","p0b9468faca13fb6100df091d20297f1","pb4e17e90f7c1cfa54560ac4fe041db6","p6c7313d1a025112e8778dfeedc0ffe1","pc491219acf1f61a59c04dea39bedfa5","p5bb4cb536f8904b937650ecbac0b94a","p26b2932ed1a63519bb81e44ba8c104c","pd3f1646db9a01cea29c61c33b9ee617","p64df099fa4661b4d400c5896a39681b","pd923a5cc21dfac7fdbf9dfa9c6fa533","pc97d58fb9ac9bd3836bbe07fdd2735a","p0248c4f7a28bc236748fc4610b5ef1d","p4caa8eb789c5d0fe7d6a88b0dc9000c","p4f2b6e1ae6b40edafecde1c73e85cd2","pad4ad4c3b995c633a39ae06c899f18a","p056aab2e73f92dbcebd51da8111c1ac","pr894be363cef980d10af39d88a85398","p0794177a7df688a3c779b7408edebf0","pf9ec94f17dc07af1ecd3409f3523f6d","pbb6cbd616af10953b12db428bd7af9d","p7e22dafa4d6ee1193820480fed43953","p067936c7397b739ec6b0d297b95ec06","pr0a8298f7c230bf5fc40124625a7d1c","p8718f47f94756d94d3933ea806b76c3","p892fd42c420a158abbdb899f7b199c4","p26bf4d581bdf25dd5dce172689be1cf","p5585fa223b46d1250fcadaf6a74bc70","p32c772c9801cf98b711e952902ba2ce","pb92c1a7e84cf6ff79b254154d1eda17","p627634414f75aa172f1623c6d909bb5","pfe71e70a5951f48e2d6be8134a69ab9","p418e3e56998a8e8237a551840a9976d","pa8379689f22cb9c588dadacbac3bd90","p3a8634f7b3ad183f6f31b9123868dce","pr796baa55fffb4891c66c5cadf93242","p686bfc2eccc4011491c9a1ddbc7609e","p1b1e565d80a051007b8d18f17e07e05","p9a719fb3a18f289340fd0c43c356839","p91e374fa50b4648e9911d941ece2b82","p824b008f59b9e5d89842ea9bd529587","pff44c7629a4b0a2bf96eea21a63f1f7","p3fb6d0bed1bd2c96b172f77c97846f4","p1fdaf8e212811fb8edd33781d84b24d","p4150ff74059ca6c582cb6151ff9718b","p10ff32f62339a56dee86d3a362ee8b2","pf28d61dd4cd96570757734940a28c55","pr0ac1235cf5613a979f9c28dc920302","p436160a297843d6312902a0049665d1","p196fb6607ce39e7e2156b254a9e54d0","p283698248c8c18693974f0ed8e2c488","p1910534b4ae98fea35ddbeb1d61cd44"];
+</script> <script type="text/javascript">
+        var qrcodePolling = false;
+    </script> </head> <body> <div style="width: 100%;height: 56px;background: transparent;"></div> <header class="header navi-header box-shadow navi-header-fixed"> <div class="container "> <div class="navi-brand"> <a class="logo" onclick="zhugeTrack('主页-顶部-logo');" href="/"> <img src="/material/theme/chacha/cms/v2/images/logo4.png" class="m-r-sm" alt="企查查"> </a> <span class="zx"> <span class="inner"> <img src="/material/theme/chacha/cms/v2/images/logo_zx_inner.png" alt="企业征信机构备案"> </span> </span> </div> <form class="navi-form" role="search" action="
+                /search"> <div class="form-group"> <div class="input-group"> <a id="clearSearchkey" class="clear-searchkey"></a> <input id="headerKey" name="key" class="form-control headerKey" type="text" placeholder="请输入企业名称、人名，产品名等，多关键词用空格隔开" value="东莞公司" autocomplete="off"> <span class="input-group-btn" style="float: left"> <button onclick="" type="submit" class="btn btn-primary top-searchbtn"></button> </span> </div> </div> <section class="panel headerKey header-section" id="header-search-list"></section> </form> <script type="text/javascript">
+                    $('#headerKey').searchList({
+                        list:'#header-search-list',
+                        clear:'#clearSearchkey',
+                                            });
+                </script> <script type="text/javascript">
+                var pathname_ = window.location.pathname; 
+                if(pathname_ == '/search_riskinfo' || pathname_ == '/search_intellectualinfo'){
+                    $('#tpsearch').attr('action', pathname_);
+                }
+            </script> <ul class="navi-nav pull-right"> <li> <a rel="nofollow" onclick="zhugeTrack('主页-顶部-APP下载');" href="/app" class="dropdown-toggle header-qrcode">
+                    APP下载
+                  </a> <section class="dropdown-menu qrcode-box"> <img src="/material/theme/chacha/cms/v2/images/header_qrcode@2x.png?t=3"> </section> </li> <li class="head-line">|</li> <li class=""> <a rel="nofollow" onclick="zhugeTrack('主页-顶部-VIP服务');" href="/vip">VIP服务</a> </li> <li class="head-line">|</li> <li><a rel="nofollow" onclick="" href="/user_login?back=%2Fsearch%3Fkey%3D%25E4%25B8%259C%25E8%258E%259E%25E5%2585%25AC%25E5%258F%25B8">登录</a></li> <li  class="head-line">|</li> <li> <a rel="nofollow" onclick="" href="/user_register">免费注册</a> </li> </ul> </div> </header> <script type="text/javascript" src="/material/js/jquery.cookie.js"></script> <script type="text/javascript" src="/material/js/jquery.validate.min.js"></script> <script type="text/javascript" src="/material/js/jquery.form.min.js"></script> <script type="text/javascript" src="/material/js/global.js?t=1568790807"></script> <style>
+    #excelTipsModal .modal-dialog,#filtrationModal .modal-dialog{
+        width: 400px;
+        margin: 30px auto;
+    }
+    #excelTipsModalBody{
+        width: 100%;
+        height: 60px;
+    }
+
+    .clearSpan{display: none;}
+    
+    .navi-header{
+        
+    }
+
+</style> <div id="V3_SL" class="container"> <div class="row"> <div class="col-md-9 no-padding"> <script type="text/javascript">
+    var proinvScrollIndex = 0;
+    function proinvScroll(next,dom){
+        if($(dom).hasClass('disable')){
+            return;
+        }
+        var width = parseInt($('.proinv-scroll').css('width'));
+        if(next){
+            proinvScrollIndex++;
+        }else{
+            proinvScrollIndex--;
+        }
+        ml = -proinvScrollIndex*368;
+        if(proinvScrollIndex>=0&&proinvScrollIndex<=width/368-2){
+            $('.proinv-scroll').css('margin-left',ml+'px');
+        }
+        if(proinvScrollIndex==0){
+           $('.proinv-scroll-btn.prev').addClass('disable'); 
+        }else{
+            $('.proinv-scroll-btn.prev').removeClass('disable');
+        }
+        if(proinvScrollIndex==parseInt(width/368)-2){
+           $('.proinv-scroll-btn.next').addClass('disable'); 
+        }else{
+            $('.proinv-scroll-btn.next').removeClass('disable');
+        }
+    }
+    var isWebkit = false;
+    if (navigator.userAgent.indexOf('Chrome') > -1 || 
+     navigator.userAgent.indexOf('Safari') > -1) {
+        isWebkit = true;
+     }
+    var proinvDesc = $('.proinv-desc');
+    for(var i=0;i<proinvDesc.length;i++){
+        if(proinvDesc[i].scrollHeight>40 && !isWebkit){
+            proinvDesc.eq(i).append('<div class="more">…</div>');
+        }
+        
+    }
+</script> <div class="col-md-12 search-sidebar hidden-xs no-padding-right" id="smartBox"> <div class="v3_sl_tab"> <a onclick="zhugeTrack('查企业-搜索选项-企业');" href="/search?key=东莞公司" class="active">企业</a> <a onclick="zhugeTrack('查企业-搜索选项-风险信息');" href="/search_riskinfo?key=东莞公司" class="">风险信息</a> <a onclick="zhugeTrack('查企业-搜索选项-知识产权');" href="/search_intellectualinfo?key=东莞公司" class="">知识产权</a> <a class="pull-right text-gray" style="padding-right: 25px;" id="hideSearchBox"><span>收起</span> <i class="i i-arrow-up4"></i></a> </div> <section class="panel b-a n-s" id="search-options"> <div id="SearchBox"> <div class="panel panel-default clearfix" id="appendBox" style="padding: 0px 0px 5px 0px;display: none;border:none;border-bottom: 1px dashed #ccc;box-shadow:none;margin-bottom:10px; "> <span class="font-15 text-dark m-l" id="has_condition"></span> <span class="m-l label btn-primary indexChoosen appendSpan clearSpan" data-option="index" style="display:none;padding:5px;cursor:pointer;"></span> <span class="m-l label btn-primary searchTypeChoosen appendSpan clearSpan" data-option="searchType" style="display:none;padding:5px;cursor:pointer;"></span> <span class="m-l label btn-primary coyTypeChoosen appendSpan clearSpan" data-option="coyType" style="display:none;padding:5px;cursor:pointer;"></span> <span class="m-l label btn-primary statusCodeChoosen appendSpan clearSpan" data-option="statusCode" style="display:none;padding:5px;cursor:pointer"></span> <span class="m-l label btn-primary registfundChoosen appendSpan clearSpan" data-option="registfund" style="display:none;padding:5px;cursor:pointer"></span> <span class="m-l label btn-primary currencyCodeChoosen appendSpan clearSpan" data-option="currencyCode" style="display:none;padding:5px;cursor:pointer"></span> <span class="m-l label btn-primary startDateChoosen appendSpan clearSpan" data-option="startDate" style="display:none;padding:5px;cursor:pointer"></span> <span class="m-l label btn-primary provinceChoosen appendSpan clearSpan" data-option="province" style="display:none;padding:5px;cursor:pointer"></span> <span class="m-l label btn-primary cityChoosen appendSpan clearSpan" data-option="city" style="display:none;padding:5px;cursor:pointer"></span> <span class="m-l label btn-primary countyChoosen appendSpan clearSpan" data-option="county" style="display:none;padding:5px;cursor:pointer"></span> <span class="m-l label btn-primary industrycodeChoosen appendSpan clearSpan" data-option="industrycode" style="display:none;padding:5px;cursor:pointer"></span> <span class="m-l label btn-primary subindustrycodeChoosen appendSpan clearSpan" data-option="subindustrycode" style="display:none;padding:5px;cursor:pointer"></span> <span class="m-l label btn-primary thirdindustrycodeChoosen appendSpan clearSpan" data-option="thirdindustrycode" style="display:none;padding:5px;cursor:pointer"></span> <a href="/search?key=东莞公司" class="m-l clearSpan pull-right" data-option="All" style="padding:5px;cursor:pointer;padding-right:20px;position: relative;top: -5px;">全部清除</a> </div> <dl class="sfilter-tag clearfix indexChoose" id="indexOld"> <div class="pull-left" style="width:76px;"><dt>查找范围</dt></div> <div class="pull-left" style="width:80%;"> <dd> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'查找范围','筛选值':'企业名'});" href="javascript:;" data-option="index" data-value="2" data-append="企业名">
+                                        企业名
+                                    </a> </dd> <dd> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'查找范围','筛选值':'法人或股东'});" href="javascript:;" data-option="index" data-value="4" data-append="法人或股东">
+                                        法人或股东
+                                    </a> </dd> <dd> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'查找范围','筛选值':'高管'});" href="javascript:;" data-option="index" data-value="6" data-append="高管">
+                                        高管
+                                    </a> </dd> <dd> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'查找范围','筛选值':'品牌/产品'});" href="javascript:;" data-option="index" data-value="8" data-append="品牌/产品">
+                                        品牌/产品
+                                    </a> </dd> <dd> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'查找范围','筛选值':'联系方式'});" href="javascript:;" data-option="index" data-value="10" data-append="联系方式">
+                                        联系方式
+                                    </a> </dd> <dd> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'查找范围','筛选值':'经营范围'});" href="javascript:;" data-option="index" data-value="12" data-append="经营范围">
+                                        经营范围
+                                    </a> </dd> </div> </dl> <dl class="sfilter-tag clearfix provinceChoose" id="provinceOld"> <div class="pull-left" style="width:76px;"><dt>省份地区</dt></div> <div class="pull-left" style="width:80%;"> <dd class="province-dd" style="display:none;" > </dd> <dd > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'广东'});" href="javascript:;" data-option="province" data-value="GD" data-append="广东" class="showCity">
+                                        广东 (<span class="text-gray">703055</span>)
+                                    </a> </dd> <dd > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'北京'});" href="javascript:;" data-option="province" data-value="BJ" data-append="北京" class="showCity">
+                                        北京 (<span class="text-gray">498</span>)
+                                    </a> </dd> <dd > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'江苏'});" href="javascript:;" data-option="province" data-value="JS" data-append="江苏" class="showCity">
+                                        江苏 (<span class="text-gray">764</span>)
+                                    </a> </dd> <dd > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'上海'});" href="javascript:;" data-option="province" data-value="SH" data-append="上海" class="showCity">
+                                        上海 (<span class="text-gray">624</span>)
+                                    </a> </dd> <dd > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'浙江'});" href="javascript:;" data-option="province" data-value="ZJ" data-append="浙江" class="showCity">
+                                        浙江 (<span class="text-gray">464</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'四川'});" href="javascript:;" data-option="province" data-value="SC" data-append="四川" class="showCity">
+                                        四川 (<span class="text-gray">414</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'山东'});" href="javascript:;" data-option="province" data-value="SD" data-append="山东" class="showCity">
+                                        山东 (<span class="text-gray">272</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'河北'});" href="javascript:;" data-option="province" data-value="HB" data-append="河北" class="showCity">
+                                        河北 (<span class="text-gray">95</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'河南'});" href="javascript:;" data-option="province" data-value="HEN" data-append="河南" class="showCity">
+                                        河南 (<span class="text-gray">213</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'福建'});" href="javascript:;" data-option="province" data-value="FJ" data-append="福建" class="showCity">
+                                        福建 (<span class="text-gray">352</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'湖北'});" href="javascript:;" data-option="province" data-value="HUB" data-append="湖北" class="showCity">
+                                        湖北 (<span class="text-gray">441</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'安徽'});" href="javascript:;" data-option="province" data-value="AH" data-append="安徽" class="showCity">
+                                        安徽 (<span class="text-gray">256</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'重庆'});" href="javascript:;" data-option="province" data-value="CQ" data-append="重庆" class="showCity">
+                                        重庆 (<span class="text-gray">261</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'陕西'});" href="javascript:;" data-option="province" data-value="SAX" data-append="陕西" class="showCity">
+                                        陕西 (<span class="text-gray">163</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'湖南'});" href="javascript:;" data-option="province" data-value="HUN" data-append="湖南" class="showCity">
+                                        湖南 (<span class="text-gray">677</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'辽宁'});" href="javascript:;" data-option="province" data-value="LN" data-append="辽宁" class="showCity">
+                                        辽宁 (<span class="text-gray">146</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'天津'});" href="javascript:;" data-option="province" data-value="TJ" data-append="天津" class="showCity">
+                                        天津 (<span class="text-gray">104</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'江西'});" href="javascript:;" data-option="province" data-value="JX" data-append="江西" class="showCity">
+                                        江西 (<span class="text-gray">467</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'云南'});" href="javascript:;" data-option="province" data-value="YN" data-append="云南" class="showCity">
+                                        云南 (<span class="text-gray">180</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'广西'});" href="javascript:;" data-option="province" data-value="GX" data-append="广西" class="showCity">
+                                        广西 (<span class="text-gray">467</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'山西'});" href="javascript:;" data-option="province" data-value="SX" data-append="山西" class="showCity">
+                                        山西 (<span class="text-gray">56</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'贵州'});" href="javascript:;" data-option="province" data-value="GZ" data-append="贵州" class="showCity">
+                                        贵州 (<span class="text-gray">208</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'吉林'});" href="javascript:;" data-option="province" data-value="JL" data-append="吉林" class="showCity">
+                                        吉林 (<span class="text-gray">44</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'黑龙江'});" href="javascript:;" data-option="province" data-value="HLJ" data-append="黑龙江" class="showCity">
+                                        黑龙江 (<span class="text-gray">36</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'内蒙古'});" href="javascript:;" data-option="province" data-value="NMG" data-append="内蒙古" class="showCity">
+                                        内蒙古 (<span class="text-gray">48</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'新疆'});" href="javascript:;" data-option="province" data-value="XJ" data-append="新疆" class="showCity">
+                                        新疆 (<span class="text-gray">70</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'甘肃'});" href="javascript:;" data-option="province" data-value="GS" data-append="甘肃" class="showCity">
+                                        甘肃 (<span class="text-gray">33</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'海南'});" href="javascript:;" data-option="province" data-value="HAIN" data-append="海南" class="showCity">
+                                        海南 (<span class="text-gray">130</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'香港'});" href="javascript:;" data-option="province" data-value="HK" data-append="香港" class="showCity">
+                                        香港 (<span class="text-gray">1708</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'宁夏'});" href="javascript:;" data-option="province" data-value="NX" data-append="宁夏" class="showCity">
+                                        宁夏 (<span class="text-gray">13</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'青海'});" href="javascript:;" data-option="province" data-value="QH" data-append="青海" class="showCity">
+                                        青海 (<span class="text-gray">12</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'台湾'});" href="javascript:;" data-option="province" data-value="TW" data-append="台湾" class="showCity">
+                                        台湾 (<span class="text-gray">22</span>)
+                                    </a> </dd> <dd class="province-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'省份地区','筛选值':'西藏'});" href="javascript:;" data-option="province" data-value="XZ" data-append="西藏" class="showCity">
+                                        西藏 (<span class="text-gray">12</span>)
+                                    </a> </dd> </div> <a class="btn btn-link btn-sm pull-right v3_a_more" id="show-province" style="margin-top:-4px;"><span>更多</span> <i class="i i-arrow-down4"></i></a> </dl> <dl class="sfilter-tag clearfix cityChoose" id="cityOld" style="display: none"> <div class="pull-left" style="width:76px;"><dt>城市</dt></div> <div class="pull-left" style="width:80%;" id="city_show"> </div> </dl> <dl class="sfilter-tag clearfix countyChoose" id="countyOld" style="display: none"> <div class="pull-left" style="width:76px;"><dt>区县</dt></div> <div class="pull-left" style="width:80%;" id="county_show"> </div> </dl> <dl class="sfilter-tag clearfix industrycodeChoose" id="industrycodeOld"> <div class="pull-left" style="width:76px;"><dt>行业门类</dt></div> <div class="pull-left" style="width:80%;"> <dd > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'批发和零售业'});" href="javascript:;" data-option="industrycode" data-value="F" data-append="批发和零售业">
+                                        批发和零售业 (<span class="text-gray">253476</span>)
+                                    </a> </dd> <dd > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'制造业'});" href="javascript:;" data-option="industrycode" data-value="C" data-append="制造业">
+                                        制造业 (<span class="text-gray">222008</span>)
+                                    </a> </dd> <dd > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'租赁和商务服务业'});" href="javascript:;" data-option="industrycode" data-value="L" data-append="租赁和商务服务业">
+                                        租赁和商务服务业 (<span class="text-gray">83747</span>)
+                                    </a> </dd> <dd > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'建筑业'});" href="javascript:;" data-option="industrycode" data-value="E" data-append="建筑业">
+                                        建筑业 (<span class="text-gray">34361</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'科学研究和技术服务业'});" href="javascript:;" data-option="industrycode" data-value="M" data-append="科学研究和技术服务业">
+                                        科学研究和技术服务业 (<span class="text-gray">18815</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'房地产业'});" href="javascript:;" data-option="industrycode" data-value="K" data-append="房地产业">
+                                        房地产业 (<span class="text-gray">16968</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'信息传输、软件和信息技术服务业'});" href="javascript:;" data-option="industrycode" data-value="I" data-append="信息传输、软件和信息技术服务业">
+                                        信息传输、软件和信息技术服务业 (<span class="text-gray">16912</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'交通运输、仓储和邮政业'});" href="javascript:;" data-option="industrycode" data-value="G" data-append="交通运输、仓储和邮政业">
+                                        交通运输、仓储和邮政业 (<span class="text-gray">15292</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'居民服务、修理和其他服务业'});" href="javascript:;" data-option="industrycode" data-value="O" data-append="居民服务、修理和其他服务业">
+                                        居民服务、修理和其他服务业 (<span class="text-gray">15168</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'住宿和餐饮业'});" href="javascript:;" data-option="industrycode" data-value="H" data-append="住宿和餐饮业">
+                                        住宿和餐饮业 (<span class="text-gray">11350</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'文化、体育和娱乐业'});" href="javascript:;" data-option="industrycode" data-value="R" data-append="文化、体育和娱乐业">
+                                        文化、体育和娱乐业 (<span class="text-gray">7185</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'金融业'});" href="javascript:;" data-option="industrycode" data-value="J" data-append="金融业">
+                                        金融业 (<span class="text-gray">5812</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'教育'});" href="javascript:;" data-option="industrycode" data-value="P" data-append="教育">
+                                        教育 (<span class="text-gray">3425</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'水利、环境和公共设施管理业'});" href="javascript:;" data-option="industrycode" data-value="N" data-append="水利、环境和公共设施管理业">
+                                        水利、环境和公共设施管理业 (<span class="text-gray">2282</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'农、林、牧、渔业'});" href="javascript:;" data-option="industrycode" data-value="A" data-append="农、林、牧、渔业">
+                                        农、林、牧、渔业 (<span class="text-gray">1506</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'电力、热力、燃气及水生产和供应业'});" href="javascript:;" data-option="industrycode" data-value="D" data-append="电力、热力、燃气及水生产和供应业">
+                                        电力、热力、燃气及水生产和供应业 (<span class="text-gray">877</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'卫生和社会工作'});" href="javascript:;" data-option="industrycode" data-value="Q" data-append="卫生和社会工作">
+                                        卫生和社会工作 (<span class="text-gray">709</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'国际组织'});" href="javascript:;" data-option="industrycode" data-value="T" data-append="国际组织">
+                                        国际组织 (<span class="text-gray">436</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'采矿业'});" href="javascript:;" data-option="industrycode" data-value="B" data-append="采矿业">
+                                        采矿业 (<span class="text-gray">119</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'公共管理、社会保障和社会组织'});" href="javascript:;" data-option="industrycode" data-value="S" data-append="公共管理、社会保障和社会组织">
+                                        公共管理、社会保障和社会组织 (<span class="text-gray">33</span>)
+                                    </a> </dd> <dd class="industrycode-dd" style="display:none;" > <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'行业门类','筛选值':'其他行业'});" href="javascript:;" data-option="industrycode" data-value="0" data-append="其他行业">
+                                        其他行业 (<span class="text-gray">3820</span>)
+                                    </a> </dd> </div> <a class="btn btn-link btn-sm pull-right v3_a_more" id="show-industrycode" style="margin-top:-4px;"><span>更多</span> <i class="i i-arrow-down4"></i></a> </dl> <dl class="sfilter-tag clearfix subindustrycodeChoose" id="subindustrycodeOld" style="display: none"> <div class="pull-left" style="width:76px;"><dt>行业大类</dt></div> <div class="pull-left" style="width:80%;" id="subindustrycode_show"> </div> </dl> <dl class="sfilter-tag clearfix thirdindustrycodeChoose" id="thirdindustrycodeOld" style="display: none"> <div class="pull-left" style="width:76px;"><dt>行业</dt></div> <div class="pull-left" style="width:80%;" id="thirdindustrycode_show"> </div> </dl> <dl class="sfilter-tag clearfix" id="sotherOld"> <div class="pull-left" style="width:76px;"><dt>更多筛选</dt> </div> <dd class="startDateChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" data-toggle="dropdown"><span class="x">成立日期</span> <span class="caret"></span></span> <ul class="dropdown-menu" style="width: 155px;"> <div class="drop-scroll" id="nstartdateOld"> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2019'});" href="javascript:;" data-option="startDate" data-value="2019" data-append="2019">2019 (<span class="text-gray">75012</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2018'});" href="javascript:;" data-option="startDate" data-value="2018" data-append="2018">2018 (<span class="text-gray">118450</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2017'});" href="javascript:;" data-option="startDate" data-value="2017" data-append="2017">2017 (<span class="text-gray">102425</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2016'});" href="javascript:;" data-option="startDate" data-value="2016" data-append="2016">2016 (<span class="text-gray">83386</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2015'});" href="javascript:;" data-option="startDate" data-value="2015" data-append="2015">2015 (<span class="text-gray">53674</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2014'});" href="javascript:;" data-option="startDate" data-value="2014" data-append="2014">2014 (<span class="text-gray">46723</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2013'});" href="javascript:;" data-option="startDate" data-value="2013" data-append="2013">2013 (<span class="text-gray">32582</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2012'});" href="javascript:;" data-option="startDate" data-value="2012" data-append="2012">2012 (<span class="text-gray">24792</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2011'});" href="javascript:;" data-option="startDate" data-value="2011" data-append="2011">2011 (<span class="text-gray">25979</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2010'});" href="javascript:;" data-option="startDate" data-value="2010" data-append="2010">2010 (<span class="text-gray">23198</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2009'});" href="javascript:;" data-option="startDate" data-value="2009" data-append="2009">2009 (<span class="text-gray">17942</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2008'});" href="javascript:;" data-option="startDate" data-value="2008" data-append="2008">2008 (<span class="text-gray">15564</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2007'});" href="javascript:;" data-option="startDate" data-value="2007" data-append="2007">2007 (<span class="text-gray">16773</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2006'});" href="javascript:;" data-option="startDate" data-value="2006" data-append="2006">2006 (<span class="text-gray">13312</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2005'});" href="javascript:;" data-option="startDate" data-value="2005" data-append="2005">2005 (<span class="text-gray">11186</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2004'});" href="javascript:;" data-option="startDate" data-value="2004" data-append="2004">2004 (<span class="text-gray">9683</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2003'});" href="javascript:;" data-option="startDate" data-value="2003" data-append="2003">2003 (<span class="text-gray">7630</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2002'});" href="javascript:;" data-option="startDate" data-value="2002" data-append="2002">2002 (<span class="text-gray">6202</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2001'});" href="javascript:;" data-option="startDate" data-value="2001" data-append="2001">2001 (<span class="text-gray">4126</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'2000'});" href="javascript:;" data-option="startDate" data-value="2000" data-append="2000">2000 (<span class="text-gray">3138</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1999'});" href="javascript:;" data-option="startDate" data-value="1999" data-append="1999">1999 (<span class="text-gray">2368</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1998'});" href="javascript:;" data-option="startDate" data-value="1998" data-append="1998">1998 (<span class="text-gray">2440</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1997'});" href="javascript:;" data-option="startDate" data-value="1997" data-append="1997">1997 (<span class="text-gray">2262</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1996'});" href="javascript:;" data-option="startDate" data-value="1996" data-append="1996">1996 (<span class="text-gray">1708</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1995'});" href="javascript:;" data-option="startDate" data-value="1995" data-append="1995">1995 (<span class="text-gray">2360</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1994'});" href="javascript:;" data-option="startDate" data-value="1994" data-append="1994">1994 (<span class="text-gray">2109</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1993'});" href="javascript:;" data-option="startDate" data-value="1993" data-append="1993">1993 (<span class="text-gray">2784</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1992'});" href="javascript:;" data-option="startDate" data-value="1992" data-append="1992">1992 (<span class="text-gray">1451</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1991'});" href="javascript:;" data-option="startDate" data-value="1991" data-append="1991">1991 (<span class="text-gray">758</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1990'});" href="javascript:;" data-option="startDate" data-value="1990" data-append="1990">1990 (<span class="text-gray">408</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1989'});" href="javascript:;" data-option="startDate" data-value="1989" data-append="1989">1989 (<span class="text-gray">316</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1988'});" href="javascript:;" data-option="startDate" data-value="1988" data-append="1988">1988 (<span class="text-gray">442</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1987'});" href="javascript:;" data-option="startDate" data-value="1987" data-append="1987">1987 (<span class="text-gray">355</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1986'});" href="javascript:;" data-option="startDate" data-value="1986" data-append="1986">1986 (<span class="text-gray">1403</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1985'});" href="javascript:;" data-option="startDate" data-value="1985" data-append="1985">1985 (<span class="text-gray">47</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1984'});" href="javascript:;" data-option="startDate" data-value="1984" data-append="1984">1984 (<span class="text-gray">37</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1983'});" href="javascript:;" data-option="startDate" data-value="1983" data-append="1983">1983 (<span class="text-gray">6</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1982'});" href="javascript:;" data-option="startDate" data-value="1982" data-append="1982">1982 (<span class="text-gray">2</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1981'});" href="javascript:;" data-option="startDate" data-value="1981" data-append="1981">1981 (<span class="text-gray">8</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1980'});" href="javascript:;" data-option="startDate" data-value="1980" data-append="1980">1980 (<span class="text-gray">5</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1978'});" href="javascript:;" data-option="startDate" data-value="1978" data-append="1978">1978 (<span class="text-gray">3</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1977'});" href="javascript:;" data-option="startDate" data-value="1977" data-append="1977">1977 (<span class="text-gray">2</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1976'});" href="javascript:;" data-option="startDate" data-value="1976" data-append="1976">1976 (<span class="text-gray">1</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1975'});" href="javascript:;" data-option="startDate" data-value="1975" data-append="1975">1975 (<span class="text-gray">2</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1974'});" href="javascript:;" data-option="startDate" data-value="1974" data-append="1974">1974 (<span class="text-gray">1</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1972'});" href="javascript:;" data-option="startDate" data-value="1972" data-append="1972">1972 (<span class="text-gray">1</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1970'});" href="javascript:;" data-option="startDate" data-value="1970" data-append="1970">1970 (<span class="text-gray">1</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1969'});" href="javascript:;" data-option="startDate" data-value="1969" data-append="1969">1969 (<span class="text-gray">1</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1967'});" href="javascript:;" data-option="startDate" data-value="1967" data-append="1967">1967 (<span class="text-gray">2</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1966'});" href="javascript:;" data-option="startDate" data-value="1966" data-append="1966">1966 (<span class="text-gray">1</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1965'});" href="javascript:;" data-option="startDate" data-value="1965" data-append="1965">1965 (<span class="text-gray">1</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1957'});" href="javascript:;" data-option="startDate" data-value="1957" data-append="1957">1957 (<span class="text-gray">1</span>)</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'1956'});" href="javascript:;" data-option="startDate" data-value="1956" data-append="1956">1956 (<span class="text-gray">3</span>)</a></li> </div> <li> <a data-option="x" class="fundrange-dropdown" onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'成立日期','筛选值':'自定义'});"> <span id="registDate" class="dropdown-toggle i-s" data-toggle="dropdown"><span class="x">自定义</span> <span class="fa fa-caret-right"></span></span> <section class="dropdown-menu fundrange registdate"> <div><span>从</span> <input id="registDateStart" class="form-control" type="text"/></div> <div><span>至</span> <input id="registDateEnd" class="form-control" type="text"/></div> <span id="registDateBtn">确定</span> </section> </a> </li> </ul> </span> </dd> <dd class="statusCodeChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" data-toggle="dropdown"><span class="x">企业状态</span> <span class="caret"></span></span> <ul class="dropdown-menu" style="padding-top: 0px;padding-bottom: 0px;"> <div class="drop-scroll" id="nstatuscodeOld"> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业状态','筛选值':'在业'});" href="javascript:;" data-option="statusCode" data-value="10" data-append="在业">在业</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业状态','筛选值':'存续'});" href="javascript:;" data-option="statusCode" data-value="20" data-append="存续">存续</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业状态','筛选值':'筹建'});" href="javascript:;" data-option="statusCode" data-value="30" data-append="筹建">筹建</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业状态','筛选值':'清算'});" href="javascript:;" data-option="statusCode" data-value="40" data-append="清算">清算</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业状态','筛选值':'迁入'});" href="javascript:;" data-option="statusCode" data-value="50" data-append="迁入">迁入</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业状态','筛选值':'迁出'});" href="javascript:;" data-option="statusCode" data-value="60" data-append="迁出">迁出</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业状态','筛选值':'停业'});" href="javascript:;" data-option="statusCode" data-value="70" data-append="停业">停业</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业状态','筛选值':'撤销'});" href="javascript:;" data-option="statusCode" data-value="80" data-append="撤销">撤销</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业状态','筛选值':'吊销'});" href="javascript:;" data-option="statusCode" data-value="90" data-append="吊销">吊销</a></li> <li><a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业状态','筛选值':'注销'});" href="javascript:;" data-option="statusCode" data-value="99" data-append="注销">注销</a></li> </div> </ul> </span> </dd> <dd class="registfundChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" data-toggle="dropdown"><span class="x">注册资本</span> <span class="caret"></span></span> <ul class="dropdown-menu" style="width: 155px;"> <div class="drop-scroll"> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'注册资本','筛选值':'500万以下'});" href="javascript:;" data-option="registfund" data-value="0-500" data-append="500万以下">500万以下</a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'注册资本','筛选值':'500~1000万'});" href="javascript:;" data-option="registfund" data-value="500-1000" data-append="500~1000万">500~1000万</a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'注册资本','筛选值':'1000~5000万'});" href="javascript:;" data-option="registfund" data-value="1000-5000" data-append="1000~5000万">1000~5000万</a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'注册资本','筛选值':'5000万以上'});" href="javascript:;" data-option="registfund" data-value="5000-0" data-append="5000万以上">5000万以上</a> </li> </div> <li> <a data-option="x" class="fundrange-dropdown" onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'注册资本','筛选值':'自定义'});"> <span id="registfundRange" class="dropdown-toggle i-s" data-toggle="dropdown"><span class="x">自定义</span> <span class="fa fa-caret-right"></span></span> <section class="dropdown-menu fundrange"> <div><span>从</span> <input id="fundStart" class="form-control" type="text"/></div> <div><span>至</span> <input id="fundEnd" class="form-control" type="text"/></div> <span id="fundBtn">确定</span> </section> </a> </li> </ul> </span> </dd> <dd class="currencyCodeChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" data-toggle="dropdown"><span class="x">资本类型</span> <span class="caret"></span></span> <ul class="dropdown-menu"> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'资本类型','筛选值':'人民币'});" href="javascript:;" data-option="currencyCode" data-value="CNY" data-append="人民币">
+                                                人民币
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'资本类型','筛选值':'美元'});" href="javascript:;" data-option="currencyCode" data-value="USD" data-append="美元">
+                                                美元
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'资本类型','筛选值':'其它'});" href="javascript:;" data-option="currencyCode" data-value="OTHER" data-append="其它">
+                                                其它
+                                            </a> </li> </ul> </span> </dd> <dd class="searchTypeChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" data-toggle="dropdown"><span class="x">组织机构</span> <span class="caret"></span></span> <ul class="dropdown-menu"> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'组织机构','筛选值':'大陆企业'});" href="javascript:;" data-option="searchType" data-value="0,4,10,11,12" data-append="大陆企业">
+                                                大陆企业
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'组织机构','筛选值':'社会组织'});" href="javascript:;" data-option="searchType" data-value="1" data-append="社会组织">
+                                                社会组织
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'组织机构','筛选值':'香港企业'});" href="javascript:;" data-option="searchType" data-value="3" data-append="香港企业">
+                                                香港企业
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'组织机构','筛选值':'台湾企业'});" href="javascript:;" data-option="searchType" data-value="5" data-append="台湾企业">
+                                                台湾企业
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'组织机构','筛选值':'基金会'});" href="javascript:;" data-option="searchType" data-value="10" data-append="基金会">
+                                                基金会
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'组织机构','筛选值':'事业单位'});" href="javascript:;" data-option="searchType" data-value="11" data-append="事业单位">
+                                                事业单位
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'组织机构','筛选值':'律师事务所'});" href="javascript:;" data-option="searchType" data-value="12" data-append="律师事务所">
+                                                律师事务所
+                                            </a> </li> </ul> </span> </dd> <dd class="coyTypeChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" data-toggle="dropdown"><span class="x">企业类型</span> <span class="caret"></span></span> <ul class="dropdown-menu"> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业类型','筛选值':'有限责任公司'});" href="javascript:;" data-option="coyType" data-value="10" data-append="有限责任公司">
+                                                有限责任公司
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业类型','筛选值':'股份有限公司'});" href="javascript:;" data-option="coyType" data-value="20" data-append="股份有限公司">
+                                                股份有限公司
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业类型','筛选值':'国企'});" href="javascript:;" data-option="coyType" data-value="30" data-append="国企">
+                                                国企
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业类型','筛选值':'外商投资企业'});" href="javascript:;" data-option="coyType" data-value="40" data-append="外商投资企业">
+                                                外商投资企业
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业类型','筛选值':'独资企业'});" href="javascript:;" data-option="coyType" data-value="50" data-append="独资企业">
+                                                独资企业
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业类型','筛选值':'个体工商户'});" href="javascript:;" data-option="coyType" data-value="70" data-append="个体工商户">
+                                                个体工商户
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业类型','筛选值':'联营企业'});" href="javascript:;" data-option="coyType" data-value="80" data-append="联营企业">
+                                                联营企业
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业类型','筛选值':'集体所有制'});" href="javascript:;" data-option="coyType" data-value="90" data-append="集体所有制">
+                                                集体所有制
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业类型','筛选值':'有限合伙'});" href="javascript:;" data-option="coyType" data-value="100" data-append="有限合伙">
+                                                有限合伙
+                                            </a> </li> <li> <a onclick="zhugeTrack('查企业-搜索列表页-筛选项',{'筛选项':'企业类型','筛选值':'普通合伙'});" href="javascript:;" data-option="coyType" data-value="110" data-append="普通合伙">
+                                                普通合伙
+                                            </a> </li> </ul> </span> </dd> </dl> <div class="sfilter-tag clearfix"> <div class="pull-left" style="width:76px;"><dt class="text-vip">VIP筛选</dt> </div> <div class="pull-left" style="width:80%;"> <dd class="telChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">联系电话</span> <span class="caret"></span></span> </span> </dd> <dd class="phoneChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">手机号码</span> <span class="caret"></span></span> </span> </dd> <dd class="emailChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">联系邮箱</span> <span class="caret"></span></span> </span> </dd> <dd class="gwebsiteChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">网址信息</span> <span class="caret"></span></span> </span> </dd> <dd class="taxChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">纳税信用</span> <span class="caret"></span></span> </span> </dd> <dd class="markChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">商标信息</span> <span class="caret"></span></span> </span> </dd> <dd class="patentChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">专利信息</span> <span class="caret"></span></span> </span> </dd> <dd class="financeChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">融资信息</span> <span class="caret"></span></span> </span> </dd> <dd class="listedChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">上市状态</span> <span class="caret"></span></span> </span> </dd> <dd class="shixinChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">失信信息</span> <span class="caret"></span></span> </span> </dd> <dd class="zzqChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">作品著作权</span> <span class="caret"></span></span> </span> </dd> <dd class="rjzzqChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">软件著作权</span> <span class="caret"></span></span> </span> </dd> <dd class="insuredChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">参保人数</span> <span class="caret"></span></span> </span> </dd> <dd class="gxjsChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">高新企业</span> <span class="caret"></span></span> </span> </dd> <dd class="tenderChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">招投标</span> <span class="caret"></span></span> </span> </dd> <dd class="ciaxChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">进出口信用</span> <span class="caret"></span></span> </span> </dd> <dd class="mpledgeChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">动产抵押</span> <span class="caret"></span></span> </span> </dd> <dd class="liquChoose"> <span class="custom a" data-option="x"> <span class="dropdown-toggle i-s" onclick="showVipModal('高级筛选功能','成为VIP会员 即可查询企业状态、电话、邮箱、商标、专利、融资、上市等高级筛选','gjsx',null,null,null);zhugeTrack('查企业-搜索列表页-高级筛选-开通VIP');"><span class="x">清算信息</span> <span class="caret"></span></span> </span> </dd> </div> </div> </div> </section> <div class="hideSearchBoxWrap"> </div> </div> <div class="col-md-12 no-padding" id="load_data" style="display: none"> <section class="text-center" style="padding:100px 0;"> <img src="/material/theme/chacha/cms/v2/images/preloader.gif" style="width:70px;margin-top:50px;"/> </section> </div> <div class="col-md-12 no-padding-right" id="ajaxlist"> <div class="panel panel-default m_search_head n-s"> <span class="font-15 text-dark-dk pull-left m-l" id="countOld">
+						                                小查为您找到
+                                <span class="text-danger">
+                                    714301
+                                </span>
+                            家符合条件的企业
+							 
+                       </span> <div class="btn-group m-r m_export" style="float: right"> <a data-toggle="modal" data-target="#loginModal" onclick="getCaptcha()"> <span class="btn btn-primary" >
+                                    导出数据 <span class="icon-10000"></span> </span> </a> <span class="export-tooltip">
+                                &nbsp;&nbsp;
+                                <i class="m_question"></i> <div class="export-ts"> <div class="kuang"> <div class="clearfix"> <div class="pull-left"> <img src="/material/theme/chacha/cms/v2/images/pic_01_lit.png"> <div class="text-center"> <a rel="nofollow" href="/vip_svip" onclick="zhugeSearchVip()" class="btn btn-primary">立即开通</a> </div> </div> <div class="pull-left text"> <p>VIP每天免费导出10次 每次最多<span class="text-danger">5000</span>条</p> <p>SVIP每天免费导出20次 每次最多<span class="text-danger">10000</span>条</p> <p class="text-gray"><span class="text-danger">*</span>网站与App的导出次数分开计算。</p> </div> </div> </div> </div> </span> </div> <div class="btn-group m-r-sm m_post" style="float: right"> <a data-toggle="modal" data-target="#loginModal" onclick="getCaptcha()" class="btn btn-primary">
+                                批量联系
+                            </a> </div> <div class="btn-group m-r-sm m_sort" style="float: right"> <span class="pull-left m-l btn btn-default" data-toggle="modal" data-target="#loginModal" onclick="getCaptcha()" > <span class="sortDesc">默认排序</span> <span class="caret m-l"></span> </span> </div> </div> <section class="panel b-a n-s" id="searchlist" style="border-top: none;margin-bottom: 0px;"> <div id="srchcheck" class="m_srchcheck"> <a onclick="batchPostcardCancel();zhugeTrack('查企业-搜索列表页-批量联系-取消');" class="btn m-r-sm btn-default">
+                            取消
+                        </a> <a onclick="batchPostcardSearchAll();zhugeTrack('查企业-搜索列表页-批量联系-全选当页');" class="btn m-r-sm btn-outline-primary"> <span id="srchcheckText">全选当页</span> </a> <a onclick="batchPost();zhugeTrack('查企业-搜索列表页-批量联系-发送');" class="btn m-r-sm btn-primary">
+                            发送(<span id="srchcheckNum">0</span>)
+                        </a> </div> <iframe id="cxjgIframe" class="vip-iframe" style="display: none;" data-src="/company_vipinsert?type=cxjg" src=""></iframe> <table class="m_srchList"> <tbody id="search-result"> <tr class=" "> <td class="checktd" width="20"> <label class="text-dark-lter"> <input type="checkbox" name="batchPostcard" onclick="batchPostcardClick()" value="244690903445dc8283a9a56233d9d935" data-name="<em>东莞</em>市<em>东莞</em>通股份有限<em>公司</em>" data-email="dongguantongxzb@163.com"> </label> </td> <td class="imgtd" width="120"> <img src="https://qccdata.qichacha.com/AutoImage/244690903445dc8283a9a56233d9d935.jpg?x-oss-process=image/resize,w_120" onerror="this.src='https://co-image.qichacha.com/CompanyImage/default.jpg'"> </td> <td> <a onclick="zhugeTrack('查企业-搜索列表页-查看企业',{'企业名称':'<em>东莞</em>市<em>东莞</em>通股份有限<em>公司</em>'});addSearchIndex('东莞公司',1,'%3Cem%3E%E4%B8%9C%E8%8E%9E%3C%2Fem%3E%E5%B8%82%3Cem%3E%E4%B8%9C%E8%8E%9E%3C%2Fem%3E%E9%80%9A%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%3Cem%3E%E5%85%AC%E5%8F%B8%3C%2Fem%3E',1);" href="/firm_244690903445dc8283a9a56233d9d935.html" target="_blank" class="ma_h1"><em>东莞</em>市<em>东莞</em>通股份有限<em>公司</em></a> <div class="search-tags"> <span class="ntag text-primary" data-type="108" data-short="" data-extend="GR201644001490">高新技术企业</span> </div> <p class="m-t-xs">
+                                                                                                                                                                                法定代表人：
+                                                                                                                                                                                                                                    <a onclick="zhugeTrack('查企业-搜索列表页-查看法定代表人',{'人物名称':'黄卫强'});" class="text-primary" href="/pl_p21ddfaa24db93ba6e9ba4eb5bba8518.html">黄卫强</a> <span class="m-l">注册资本：6000万元人民币</span> <span class="m-l">成立日期：2013-04-10</span> </p> <p class="m-t-xs">
+                                            邮箱：dongguantongxzb@163.com
+                                                                                        <span class="m-l">
+                                                电话：
+                                                                                                    0769-2266****
+                                                                                            </span> </p> <p class="m-t-xs">
+                                            地址：<em>东莞</em>市东城街道东源路33号5楼
+                                        </p> <p> <i class="i   i-search"></i>
+                                                                                        网址：<em>东莞</em>市<em>东莞</em>通股份有限<e...
+                                                                                        
+                                                                                                            
+                                        
+                                    
+                                </td> <td width="100" class="statustd"> <span class="nstatus text-success-lt m-l-xs">在业</span> <a class="hphoneview phoneviewBtn"> <div class="bar-phoneview" data-keyno="244690903445dc8283a9a56233d9d935" data-name="<em>东莞</em>市<em>东莞</em>通股份有限<em>公司</em>"> <div class="cname"><em>东莞</em>市<em>东莞</em>通股份有限<em>公司</em></div> <div class="wrap"> <div class="qrcode"></div> <img class="phone-ic" src="/material/theme/chacha/cms/v2/images/phoneview_ic.png"> </div> <div class="text"> <span class="text-primary">微信</span>或<span class="text-primary">企查查APP</span> 扫一扫查看详情
+    	
+    </div> </div> </a> </td> </tr> <tr class=" "> <td class="checktd" width="20"> <label class="text-dark-lter"> <input type="checkbox" name="batchPostcard" onclick="batchPostcardClick()" value="b20ba8162653b29ec0112dee40ca183a" data-name="<em>东</em><em>莞</em>市能源投资集团有限<em>公</em><em>司</em>" data-email="fengcai@dg-energy.com"> </label> </td> <td class="imgtd" width="120"> <img src="https://co-image.qichacha.com/CompanyImage/b20ba8162653b29ec0112dee40ca183a.jpg?x-oss-process=style/qcc_cmp" onerror="this.src='https://co-image.qichacha.com/CompanyImage/default.jpg'"> </td> <td> <a onclick="zhugeTrack('查企业-搜索列表页-查看企业',{'企业名称':'<em>东</em><em>莞</em>市能源投资集团有限<em>公</em><em>司</em>'});addSearchIndex('东莞公司',2,'%3Cem%3E%E4%B8%9C%3C%2Fem%3E%3Cem%3E%E8%8E%9E%3C%2Fem%3E%E5%B8%82%E8%83%BD%E6%BA%90%E6%8A%95%E8%B5%84%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%3Cem%3E%E5%85%AC%3C%2Fem%3E%3Cem%3E%E5%8F%B8%3C%2Fem%3E',1);" href="/firm_b20ba8162653b29ec0112dee40ca183a.html" target="_blank" class="ma_h1"><em>东</em><em>莞</em>市能源投资集团有限<em>公</em><em>司</em></a> <div class="search-tags"> </div> <p class="m-t-xs">
+                                                                                                                                                                                法定代表人：
+                                                                                                                                                                                                                                    <a onclick="zhugeTrack('查企业-搜索列表页-查看法定代表人',{'人物名称':'陈仲新'});" class="text-primary" href="/pl_p4d2931b198b435976c44d51c1a3a73f.html">陈仲新</a> <span class="m-l">注册资本：10000万元人民币</span> <span class="m-l">成立日期：1989-06-30</span> </p> <p class="m-t-xs">
+                                            邮箱：fengcai@dg-energy.com
+                                                                                                                                                <a data-toggle="modal" data-target="#loginModal" onclick="getCaptcha();" class="text-primary">更多邮箱</a> <span class="m-l">
+                                                电话：
+                                                                                                    0769-2332****
+                                                                                            </span> </p> <p class="m-t-xs">
+                                            地址：<em>东莞</em>松山湖高新技术产业开发区新城大道5号D栋
+                                        </p> <p> <i class="i   i-search"></i>
+                                                                                        网址：<em>东莞</em>市能源投资集团有限<em>公司</em...
+                                                                                        
+                                                                                                            
+                                        
+                                    
+                                </td> <td width="100" class="statustd"> <span class="nstatus text-success-lt m-l-xs">在业</span> <a class="hphoneview phoneviewBtn"> <div class="bar-phoneview" data-keyno="b20ba8162653b29ec0112dee40ca183a" data-name="<em>东</em><em>莞</em>市能源投资集团有限<em>公</em><em>司</em>"> <div class="cname"><em>东</em><em>莞</em>市能源投资集团有限<em>公</em><em>司</em></div> <div class="wrap"> <div class="qrcode"></div> <img class="phone-ic" src="/material/theme/chacha/cms/v2/images/phoneview_ic.png"> </div> <div class="text"> <span class="text-primary">微信</span>或<span class="text-primary">企查查APP</span> 扫一扫查看详情
+    	
+    </div> </div> </a> </td> </tr> <tr class=" "> <td class="checktd" width="20"> <label class="text-dark-lter"> <input type="checkbox" name="batchPostcard" onclick="batchPostcardClick()" value="c8b4c21b3481cc39d3fd9cf21ab49d53" data-name="<em>东</em><em>莞</em>铭丰包装股份有限<em>公</em><em>司</em>" data-email="info@mingfengdg.com"> </label> </td> <td class="imgtd" width="120"> <img src="https://co-image.qichacha.com/CompanyImage/c8b4c21b3481cc39d3fd9cf21ab49d53.jpg?x-oss-process=style/qcc_cmp" onerror="this.src='https://co-image.qichacha.com/CompanyImage/default.jpg'"> <i class="icon-ptrz110"></i> </td> <td> <a onclick="zhugeTrack('查企业-搜索列表页-查看企业',{'企业名称':'<em>东</em><em>莞</em>铭丰包装股份有限<em>公</em><em>司</em>'});addSearchIndex('东莞公司',3,'%3Cem%3E%E4%B8%9C%3C%2Fem%3E%3Cem%3E%E8%8E%9E%3C%2Fem%3E%E9%93%AD%E4%B8%B0%E5%8C%85%E8%A3%85%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%3Cem%3E%E5%85%AC%3C%2Fem%3E%3Cem%3E%E5%8F%B8%3C%2Fem%3E',1);" href="/firm_c8b4c21b3481cc39d3fd9cf21ab49d53.html" target="_blank" class="ma_h1"><em>东</em><em>莞</em>铭丰包装股份有限<em>公</em><em>司</em></a> <div class="search-tags"> <span class="ntag text-primary" >新三板 | 铭丰股份 <span class="m-l-xs">873313</span></span> <span class="ntag text-primary" data-type="108" data-short="" data-extend="GR201644001437">高新技术企业</span> </div> <p class="m-t-xs">
+                                                                                                                                                                                法定代表人：
+                                                                                                                                                                                                                                    <a onclick="zhugeTrack('查企业-搜索列表页-查看法定代表人',{'人物名称':'赖沛铭'});" class="text-primary" href="/pl_p1119aceef4664f5f310f299d62254ab.html">赖沛铭</a> <span class="m-l">注册资本：7835.23万元人民币</span> <span class="m-l">成立日期：2002-01-22</span> </p> <p class="m-t-xs">
+                                            邮箱：info@mingfengdg.com
+                                                                                                                                                <a data-toggle="modal" data-target="#loginModal" onclick="getCaptcha();" class="text-primary">更多邮箱</a> <span class="m-l">
+                                                电话：
+                                                                                                    0769-2217****
+                                                                                            </span> <a class="text-primary" onclick="showVipModal('更多号码','成为VIP会员 即可挖掘企业更多联系方式','gdhm');zhugeTrack('查企业-搜索列表页-更多号码-开通VIP');">更多号码</a> </p> <p class="m-t-xs">
+                                            地址：<em>东莞</em>市万江区严屋铭丰工业园
+                                        </p> <p> <i class="i   i-search"></i>
+                                                                                        网址：<em>东莞</em>铭丰包装股份有限<em>公司</em> </td> <td width="100" class="statustd"> <span class="nstatus text-success-lt m-l-xs">在业</span> <a class="hphoneview phoneviewBtn"> <div class="bar-phoneview" data-keyno="c8b4c21b3481cc39d3fd9cf21ab49d53" data-name="<em>东</em><em>莞</em>铭丰包装股份有限<em>公</em><em>司</em>"> <div class="cname"><em>东</em><em>莞</em>铭丰包装股份有限<em>公</em><em>司</em></div> <div class="wrap"> <div class="qrcode"></div> <img class="phone-ic" src="/material/theme/chacha/cms/v2/images/phoneview_ic.png"> </div> <div class="text"> <span class="text-primary">微信</span>或<span class="text-primary">企查查APP</span> 扫一扫查看详情
+    	
+    </div> </div> </a> </td> </tr> <tr class=" "> <td class="checktd" width="20"> <label class="text-dark-lter"> <input type="checkbox" name="batchPostcard" onclick="batchPostcardClick()" value="3efe20259a33d1a3455641394e5cddac" data-name="<em>东</em><em>莞</em>新奥燃气有限<em>公</em><em>司</em>" data-email="dgxinaogas@enn.cn"> </label> </td> <td class="imgtd" width="120"> <img src="https://co-image.qichacha.com/CompanyImage/3efe20259a33d1a3455641394e5cddac.jpg?x-oss-process=style/qcc_cmp" onerror="this.src='https://co-image.qichacha.com/CompanyImage/default.jpg'"> </td> <td> <a onclick="zhugeTrack('查企业-搜索列表页-查看企业',{'企业名称':'<em>东</em><em>莞</em>新奥燃气有限<em>公</em><em>司</em>'});addSearchIndex('东莞公司',4,'%3Cem%3E%E4%B8%9C%3C%2Fem%3E%3Cem%3E%E8%8E%9E%3C%2Fem%3E%E6%96%B0%E5%A5%A5%E7%87%83%E6%B0%94%E6%9C%89%E9%99%90%3Cem%3E%E5%85%AC%3C%2Fem%3E%3Cem%3E%E5%8F%B8%3C%2Fem%3E',1);" href="/firm_3efe20259a33d1a3455641394e5cddac.html" target="_blank" class="ma_h1"><em>东</em><em>莞</em>新奥燃气有限<em>公</em><em>司</em></a> <div class="search-tags"> <span class="ntag text-primary" data-type="108" data-short="" data-extend="GR201644001798">高新技术企业</span> </div> <p class="m-t-xs">
+                                                                                                                                                                                法定代表人：
+                                                                                                                                                                                                                                    <a onclick="zhugeTrack('查企业-搜索列表页-查看法定代表人',{'人物名称':'陈仲新'});" class="text-primary" href="/pl_p4d2931b198b435976c44d51c1a3a73f.html">陈仲新</a> <span class="m-l">注册资本：2800万美元</span> <span class="m-l">成立日期：2003-06-30</span> </p> <p class="m-t-xs">
+                                            邮箱：dgxinaogas@enn.cn
+                                                                                        <span class="m-l">
+                                                电话：
+                                                                                                    0769-8899****
+                                                                                            </span> </p> <p class="m-t-xs">
+                                            地址：<em>东莞</em>市东城区莞龙路柏洲边路段206号
+                                        </p> <p> <i class="i   i-search"></i>
+                                                                                        网址：<em>东莞</em>新奥燃气有限<em>公司</em> </td> <td width="100" class="statustd"> <span class="nstatus text-success-lt m-l-xs">在业</span> <a class="hphoneview phoneviewBtn"> <div class="bar-phoneview" data-keyno="3efe20259a33d1a3455641394e5cddac" data-name="<em>东</em><em>莞</em>新奥燃气有限<em>公</em><em>司</em>"> <div class="cname"><em>东</em><em>莞</em>新奥燃气有限<em>公</em><em>司</em></div> <div class="wrap"> <div class="qrcode"></div> <img class="phone-ic" src="/material/theme/chacha/cms/v2/images/phoneview_ic.png"> </div> <div class="text"> <span class="text-primary">微信</span>或<span class="text-primary">企查查APP</span> 扫一扫查看详情
+    	
+    </div> </div> </a> </td> </tr> <tr class=" "> <td class="checktd" width="20"> <label class="text-dark-lter"> <input type="checkbox" name="batchPostcard" onclick="batchPostcardClick()" value="e81d20da1d4097f507965a65ad2cd833" data-name="<em>东</em><em>莞</em>捷荣技术股份有限<em>公</em><em>司</em>" data-email="xiaohp@chitwing.com"> </label> </td> <td class="imgtd" width="120"> <img src="https://co-image.qichacha.com/CompanyImage/e81d20da1d4097f507965a65ad2cd833.jpg?x-oss-process=style/qcc_cmp" onerror="this.src='https://co-image.qichacha.com/CompanyImage/default.jpg'"> </td> <td> <a onclick="zhugeTrack('查企业-搜索列表页-查看企业',{'企业名称':'<em>东</em><em>莞</em>捷荣技术股份有限<em>公</em><em>司</em>'});addSearchIndex('东莞公司',5,'%3Cem%3E%E4%B8%9C%3C%2Fem%3E%3Cem%3E%E8%8E%9E%3C%2Fem%3E%E6%8D%B7%E8%8D%A3%E6%8A%80%E6%9C%AF%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%3Cem%3E%E5%85%AC%3C%2Fem%3E%3Cem%3E%E5%8F%B8%3C%2Fem%3E',1);" href="/firm_e81d20da1d4097f507965a65ad2cd833.html" target="_blank" class="ma_h1"><em>东</em><em>莞</em>捷荣技术股份有限<em>公</em><em>司</em></a> <div class="search-tags"> <span class="ntag text-primary" >A股 | 捷荣技术 <span class="m-l-xs">002855.SZ</span></span> <span class="ntag text-primary" data-type="108" data-short="" data-extend="GR201744004404">高新技术企业</span> </div> <p class="m-t-xs">
+                                                                                                                                                                                法定代表人：
+                                                                                                                                                                                                                                    <a onclick="zhugeTrack('查企业-搜索列表页-查看法定代表人',{'人物名称':'赵晓群'});" class="text-primary" href="/pl_p63c2b906cf4547e5969e6a63c1c4745.html">赵晓群</a> <span class="m-l">注册资本：24000万元人民币</span> <span class="m-l">成立日期：2007-09-25</span> </p> <p class="m-t-xs">
+                                            邮箱：xiaohp@chitwing.com
+                                                                                        <span class="m-l">
+                                                电话：
+                                                                                                    1355674****
+                                                                                            </span> <a class="text-primary" onclick="showVipModal('更多号码','成为VIP会员 即可挖掘企业更多联系方式','gdhm');zhugeTrack('查企业-搜索列表页-更多号码-开通VIP');">更多号码</a> </p> <p class="m-t-xs">
+                                            地址：<em>东莞</em>市长安镇新安工业园
+                                        </p> <p> <i class="i   i-search"></i>
+                                                                                        网址：<em>东莞</em>捷荣技术股份有限<em>公司</em>...
+                                                                                        
+                                                                                                            
+                                        
+                                    
+                                </td> <td width="100" class="statustd"> <span class="nstatus text-success-lt m-l-xs">在业</span> <a class="hphoneview phoneviewBtn"> <div class="bar-phoneview" data-keyno="e81d20da1d4097f507965a65ad2cd833" data-name="<em>东</em><em>莞</em>捷荣技术股份有限<em>公</em><em>司</em>"> <div class="cname"><em>东</em><em>莞</em>捷荣技术股份有限<em>公</em><em>司</em></div> <div class="wrap"> <div class="qrcode"></div> <img class="phone-ic" src="/material/theme/chacha/cms/v2/images/phoneview_ic.png"> </div> <div class="text"> <span class="text-primary">微信</span>或<span class="text-primary">企查查APP</span> 扫一扫查看详情
+    	
+    </div> </div> </a> </td> </tr> </tbody> </table> </section> <div style="text-align:center;"></div> <div class="company-mengban"> <div class="company-vip-kuang"> <div class="company-vip-title m-t"> <p>亲，小查告诉你个秘密:-D</p> <p>登录后可以查看更多数据，免费获取信用报告哦！</p> </div> <a data-toggle="modal" data-target="#loginModal" onclick="getCaptcha()" class="company-vip-btn btn btn-danger m-t">立即登录</a> <a rel="nofollow" href="/user_register?back=/search?key=东莞公司" class="company-vip-btn btn btn-primary m-t m-l">免费注册</a> </div> </div> </div> </div> <div class="col-md-3"> <div class="m-b"> <a onclick="zhugeTrack('广告-企查查小程序');" href="https://www.qichacha.com/weixin_xcx" target="_blank"> <img src="https://co-image.qichacha.com/upload/chacha/img/20181204/1543903668669241.png" style="width:280px;" alt="企查查"/> </a> </div> <div class="m-b"> <a onclick="zhugeTrack('广告-企查查APP');" href="https://www.qichacha.com/app" target="_blank"> <img src="https://co-image.qichacha.com/upload/chacha/img/20190911/1568184265725113.png" style="width:280px;" alt="企查查"/> </a> </div> <div class="m-b"> <a onclick="zhugeTrack('广告-批量导出开通VIP');" href="https://www.qichacha.com/vip" target="_blank"> <img src="https://co-image.qichacha.com/upload/chacha/img/20181204/1543903652205295.png" style="width:280px;" alt="企查查"/> </a> </div> <div id="brandranking" class="m_rightPanels"> </div> <section class="panel b-a n-s" style="width:280px;margin-top:20px;"> <div class="panel-heading b-b" style="font-size:18px;;"> <span class="font-bold font-15 text-dark" style="color:#5c5c5c;">最近浏览</span> </div> <ul class="list-group no-bg auto v3_lastview"> <a href="/firm_1d0012981f40e24e3f25ab683bf623d0.html" target="_blank" class="list-group-item clearfix"> <span class="font-15 clear">唐山港集团股份有限公司</span> <span class="text-muted text-xs clear"><i class="i i-clock"></i> 1分钟前</span> </a> <a href="/firm_ff4aa520b60a53abd34ea916435c3057.html" target="_blank" class="list-group-item clearfix"> <span class="font-15 clear">天津所托瑞安汽车科技有限公司</span> <span class="text-muted text-xs clear"><i class="i i-clock"></i> 1分钟前</span> </a> <a href="/firm_8bbdd32144ea167e3dec0ce0e5387d47.html" target="_blank" class="list-group-item clearfix"> <span class="font-15 clear">泉州亨贝适母婴用品有限公司</span> <span class="text-muted text-xs clear"><i class="i i-clock"></i> 1分钟前</span> </a> <a href="/firm_d99df9e8ddd95a48fe3a9f8a36cdcde2.html" target="_blank" class="list-group-item clearfix"> <span class="font-15 clear">新兴铸管新疆有限公司</span> <span class="text-muted text-xs clear"><i class="i i-clock"></i> 1分钟前</span> </a> <a href="/firm_486dd64455df2fe14702ed26ce45574a.html" target="_blank" class="list-group-item clearfix"> <span class="font-15 clear">深圳市嘉霖集团有限公司</span> <span class="text-muted text-xs clear"><i class="i i-clock"></i> 1分钟前</span> </a> </ul> </section> </div> <div class="modal fade" id="excelTipsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-header"> <button type="button" id="excelTipsModalClose" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">x</span></button> <h4 class="modal-title">友情提示</h4> </div> <div class="modal-body"> <div id="excelTipsModalBody">
+                            会员用户每天可以免费10次下载企业信息、联系方式等。
+                            <a rel="nofollow" onclick="" href="/vip" target="_blank" class="text-primary">立即开通VIP>></a> </div> </div> </div> </div> </div> <div class="modal fade" id="filtrationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">x</span></button> <h4 class="modal-title">友情提示</h4> </div> <div class="modal-body text-center"> <a rel="nofollow" onclick="" href="/vip" target="_blank" class="text-primary">开通VIP</a>
+                        ,尊享高级筛选功能
+                    </div> </div> </div> </div> </div> </div> <div class="modal fade in" id="searchTongji" tabindex="-1" role="dialog" data-show="true" aria-labelledby="myModalLabel" aria-hidden="false"> <div class="modal-dialog" style="width: 90%;"> <div class="modal-content" > <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">x</span></button> <h4 class="modal-title" id="myModalLabel">数据统计</h4> </div> <div class="modal-body"> <div class="row"> <div class="col-md-6"> <div class="panel no-border"> <div class="panel-heading wrapper b-b b-light"> <h4 class="font-thin m-t-none m-b-none">行业分布图</h4> </div> <div class="panel-body"> <div id="search-industry" style="width: 100%;height:500px;"></div> </div> </div> </div> <div class="col-md-6"> <div class="panel no-border"> <div class="panel-heading wrapper b-b b-light"> <h4 class="font-thin m-t-none m-b-none">状态统计图</h4> </div> <div class="panel-body"> <div id="search-status" style="width: 100%;height:500px;"></div> </div> </div> </div> <div class="col-md-12"> <div class="panel no-border"> <div class="panel-heading wrapper b-b b-light"> <h4 class="font-thin m-t-none m-b-none">区域分布图</h4> </div> <div class="panel-body"> <div id="search-province" style="width: 100%;height:750px;"></div> </div> </div> </div> <div class="col-md-12"> <div class="panel no-border"> <div class="panel-heading wrapper b-b b-light"> <h4 class="font-thin m-t-none m-b-none">年份统计图</h4> </div> <div class="panel-body"> <div id="search-year" style="width: 100%;height:500px;"></div> </div> </div> </div> </div> </div> </div> </div> </div> <div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog nmodal" style="width: 400px"> <div class="modal-content qy-modal"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">x</span></button> <h4 class="modal-title">更多号码
+                <span class="ntag vip m-l-sm" data-trigger="hover" data-html="true" data-toggle="tooltip" data-placement="bottom" data-delay="500" title="尊敬的会员，您正在使用高级特权">功能</span> </h4> </div> <div class="modal-body"> </div> </div> </div> </div> <div class="modal fade" id="hisEmailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog nmodal" style="width: 400px"> <div class="modal-content qy-modal"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">x</span></button> <h4 class="modal-title">更多邮箱</h4> </div> <div class="modal-body"> </div> </div> </div> </div> <div class="modal fade" id="postCardModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog nmodal sm"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">x</span></button> <h4 class="modal-title postcard-tep1">设置名片</h4> <h4 class="modal-title postcard-tep2">发送名片</h4> </div> <form class="form-horizontal pform" role="form" id="postCardForm"> <div class="modal-body postcard-tep1"> <div class="form-group"> <label class="col-pre">选择头像<span class="redstar">*</span></label> <div class="col-after" style="margin-top: 8px;"> <div id="uploadFaceImgArea" class="fileinput"> <div class="img" onclick="fileinput('faceImg')" style="display: block;"> <img src="" onerror="this.src='/material/theme/chacha/cms/v2/images/default_face.png'"> <span>上传头像</span> </div> <input type="hidden" name="faceimg"> <span class="message" msgfor="faceimg"> </span> </div> </div> </div> <div class="form-group"> <label class="col-pre">真实姓名<span class="redstar">*</span></label> <div class="col-after"> <input type="text" class="form-control" name="name" placeholder="请输入真实姓名" value=""> <span msgfor="name"></span> </div> </div> <div class="form-group"> <label class="col-pre">企业<span class="redstar">*</span></label> <div class="col-after"> <input type="hidden" name="my_company_keyno" id="postCardCompanyKey" value=""> <input type="text" class="form-control" name="my_company_name" id="postCardCompanyName" onclick="scompanyList(this.value,'postCardCompanyList','postCardCompanyName','postCardCompanyKey')" onkeyup="scompanyList(this.value,'postCardCompanyList','postCardCompanyName','postCardCompanyKey')" autocomplete="off" placeholder="请输入所属企业" value=""> <section class="scompany-list" id="postCardCompanyList" style="position: absolute;width: 427px"></section> <span msgfor="my_company_name"></span> </div> </div> <div class="form-group"> <label class="col-pre">职位<span class="redstar">*</span></label> <div class="col-after"> <input type="text" class="form-control" name="position" placeholder="请输入企业职位" value=""> <span msgfor="position"></span> </div> </div> <div class="form-group"> <label class="col-pre">电话<span class="redstar">*</span></label> <div class="col-after"> <input type="hidden" name="phone_prefix" value=""> <input type="text" class="form-control" name="phone" value="" placeholder="请输入联系电话" value=""> <span msgfor="phone"></span> </div> </div> <div class="form-group"> <label class="col-pre">邮箱<span class="redstar">*</span></label> <div class="col-after"> <input type="text" class="form-control" name="email" value="" placeholder="请输入联系邮箱" value=""> <span msgfor="email"></span> </div> </div> <div class="form-group"> <div class="col-all"> <p class="ts">发送的名片将以APP通知或邮件形式送达指定企业，禁止发布广告、骚扰等无关信息。如收到举报并核实，企查查有权永久封禁被举报账号。</p> </div> </div> </div> <div class="modal-body postcard-tep2"> <div class="postcard-wrap"> <div class="pcard-content"> <div class="clearfix"> <div class="col-ft"> <div class="img"> <img id="postcardImg" onerror="this.src='/material/theme/chacha/cms/v2/images/default_face.png'"> </div> </div> <div class="col-bd"> <div class="title"> <h4 id="postcardName">雷军</h4> <span id="postCardCompany">小米科技有限责任公司</span> </div> </div> </div> <div class="clearfix m-t-sm"> <span class="des">职位：</span> <span id="postCardPostion" class="value">CEO</span> </div> <div class="clearfix m-t-xs"> <span class="des">电话：</span> <span id="postCardPhone" class="value">13872119231</span> </div> <div class="clearfix m-t-xs"> <span class="des">邮箱：</span> <span id="postCardEmail" class="value">leijun@xiaomi.com</span> </div> </div> </div> <div class="form-group m-t-md"> <div class="col-all"> <textarea style="resize: none;" rows="3" name="cooperation_intention" class="form-control" placeholder="请输入合作意向，详细介绍你的合作意向，有助于推动对方快速联系你"></textarea> <span msgfor="cooperation_intention"></span> </div> </div> <div class="form-group"> <div class="col-all"> <p class="ts">发送的名片将以APP通知或邮件形式送达指定企业，禁止发布广告、骚扰等无关信息。如收到举报并核实，企查查有权永久封禁被举报账号。</p> </div> </div> </div> <div class="modal-footer"> <input type="hidden" id="postCardToOptions" name="to_company_options"> <button type="button" onclick="postcardTep(2)" class="btn btn-primary postcard-tep1">下一步</button> <a rel="nofollow" href="/user_setting?from=f" class="btn btn-default postcard-tep2">修改信息</a> <button type="submit" class="btn btn-primary postcard-tep2">发送名片</button> </div> </form> <form class="pform-uploadimg" enctype="multipart/form-data" id="uploadFaceImg"> <input type="file" id="faceImg" name="pic"> </form> </div> </div> </div> <div class="modal fade" id="toSettingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog nmodal sm" style="width: 450px;"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">x</span></button> <h4 class="modal-title">提示</h4> </div> <div class="modal-body"> <div class="pnodata"> <img src="/material/theme/chacha/cms/v2/images/nno_image.png"> <p>投递名片，请确认已绑定手机号、邮箱以及完善个人信息</p> </div> </div> <div class="modal-footer"> <a rel="nofollow" href="/user_setting?from=f" class="btn btn-primary">去设置</a> </div> </div> </div> </div> <script type="text/javascript" src="/material/theme/chacha/cms/v2/js/searchindex.js?time=1568790807"></script> <script type="text/javascript">
+    var postcardCount = parseInt('');
+    var TotalRecords = '714301';
+    var requestFlag = '1';
+    var dataForChart = JSON.parse('[{"key":"province","items":[{"value":"GD","count":703055,"desc":"\u5e7f\u4e1c"},{"value":"","count":1996,"desc":""},{"value":"HK","count":1708,"desc":"\u9999\u6e2f"},{"value":"JS","count":764,"desc":"\u6c5f\u82cf"},{"value":"HUN","count":677,"desc":"\u6e56\u5357"},{"value":"SH","count":624,"desc":"\u4e0a\u6d77"},{"value":"BJ","count":498,"desc":"\u5317\u4eac"},{"value":"GX","count":467,"desc":"\u5e7f\u897f"},{"value":"JX","count":467,"desc":"\u6c5f\u897f"},{"value":"ZJ","count":464,"desc":"\u6d59\u6c5f"},{"value":"HUB","count":441,"desc":"\u6e56\u5317"},{"value":"SC","count":414,"desc":"\u56db\u5ddd"},{"value":"FJ","count":352,"desc":"\u798f\u5efa"},{"value":"SD","count":272,"desc":"\u5c71\u4e1c"},{"value":"CQ","count":261,"desc":"\u91cd\u5e86"},{"value":"AH","count":256,"desc":"\u5b89\u5fbd"},{"value":"HEN","count":213,"desc":"\u6cb3\u5357"},{"value":"GZ","count":208,"desc":"\u8d35\u5dde"},{"value":"YN","count":180,"desc":"\u4e91\u5357"},{"value":"SAX","count":163,"desc":"\u9655\u897f"},{"value":"LN","count":146,"desc":"\u8fbd\u5b81"},{"value":"HAIN","count":130,"desc":"\u6d77\u5357"},{"value":"TJ","count":104,"desc":"\u5929\u6d25"},{"value":"HB","count":95,"desc":"\u6cb3\u5317"},{"value":"XJ","count":70,"desc":"\u65b0\u7586"},{"value":"SX","count":56,"desc":"\u5c71\u897f"},{"value":"NMG","count":48,"desc":"\u5185\u8499\u53e4"},{"value":"JL","count":44,"desc":"\u5409\u6797"},{"value":"HLJ","count":36,"desc":"\u9ed1\u9f99\u6c5f"},{"value":"GS","count":33,"desc":"\u7518\u8083"},{"value":"TW","count":22,"desc":"\u53f0\u6e7e"},{"value":"NX","count":13,"desc":"\u5b81\u590f"},{"value":"QH","count":12,"desc":"\u9752\u6d77"},{"value":"XZ","count":12,"desc":"\u897f\u85cf"}]},{"key":"industrycode","items":[{"value":"F","count":253476,"desc":"\u6279\u53d1\u548c\u96f6\u552e\u4e1a"},{"value":"C","count":222008,"desc":"\u5236\u9020\u4e1a"},{"value":"L","count":83747,"desc":"\u79df\u8d41\u548c\u5546\u52a1\u670d\u52a1\u4e1a"},{"value":"E","count":34361,"desc":"\u5efa\u7b51\u4e1a"},{"value":"M","count":18815,"desc":"\u79d1\u5b66\u7814\u7a76\u548c\u6280\u672f\u670d\u52a1\u4e1a"},{"value":"K","count":16968,"desc":"\u623f\u5730\u4ea7\u4e1a"},{"value":"I","count":16912,"desc":"\u4fe1\u606f\u4f20\u8f93\u3001\u8f6f\u4ef6\u548c\u4fe1\u606f\u6280\u672f\u670d\u52a1\u4e1a"},{"value":"G","count":15292,"desc":"\u4ea4\u901a\u8fd0\u8f93\u3001\u4ed3\u50a8\u548c\u90ae\u653f\u4e1a"},{"value":"O","count":15168,"desc":"\u5c45\u6c11\u670d\u52a1\u3001\u4fee\u7406\u548c\u5176\u4ed6\u670d\u52a1\u4e1a"},{"value":"H","count":11350,"desc":"\u4f4f\u5bbf\u548c\u9910\u996e\u4e1a"},{"value":"R","count":7185,"desc":"\u6587\u5316\u3001\u4f53\u80b2\u548c\u5a31\u4e50\u4e1a"},{"value":"J","count":5812,"desc":"\u91d1\u878d\u4e1a"},{"value":"","count":3820,"desc":""},{"value":"P","count":3425,"desc":"\u6559\u80b2"},{"value":"N","count":2282,"desc":"\u6c34\u5229\u3001\u73af\u5883\u548c\u516c\u5171\u8bbe\u65bd\u7ba1\u7406\u4e1a"},{"value":"A","count":1506,"desc":"\u519c\u3001\u6797\u3001\u7267\u3001\u6e14\u4e1a"},{"value":"D","count":877,"desc":"\u7535\u529b\u3001\u70ed\u529b\u3001\u71c3\u6c14\u53ca\u6c34\u751f\u4ea7\u548c\u4f9b\u5e94\u4e1a"},{"value":"Q","count":709,"desc":"\u536b\u751f\u548c\u793e\u4f1a\u5de5\u4f5c"},{"value":"T","count":436,"desc":"\u56fd\u9645\u7ec4\u7ec7"},{"value":"B","count":119,"desc":"\u91c7\u77ff\u4e1a"},{"value":"S","count":33,"desc":"\u516c\u5171\u7ba1\u7406\u3001\u793e\u4f1a\u4fdd\u969c\u548c\u793e\u4f1a\u7ec4\u7ec7"}]},{"key":"startdateyear","items":[{"value":"1956","count":3,"desc":"1956"},{"value":"1957","count":1,"desc":"1957"},{"value":"1965","count":1,"desc":"1965"},{"value":"1966","count":1,"desc":"1966"},{"value":"1967","count":2,"desc":"1967"},{"value":"1969","count":1,"desc":"1969"},{"value":"1970","count":1,"desc":"1970"},{"value":"1972","count":1,"desc":"1972"},{"value":"1974","count":1,"desc":"1974"},{"value":"1975","count":2,"desc":"1975"},{"value":"1976","count":1,"desc":"1976"},{"value":"1977","count":2,"desc":"1977"},{"value":"1978","count":3,"desc":"1978"},{"value":"1980","count":5,"desc":"1980"},{"value":"1981","count":8,"desc":"1981"},{"value":"1982","count":2,"desc":"1982"},{"value":"1983","count":6,"desc":"1983"},{"value":"1984","count":37,"desc":"1984"},{"value":"1985","count":47,"desc":"1985"},{"value":"1986","count":1403,"desc":"1986"},{"value":"1987","count":355,"desc":"1987"},{"value":"1988","count":442,"desc":"1988"},{"value":"1989","count":316,"desc":"1989"},{"value":"1990","count":408,"desc":"1990"},{"value":"1991","count":758,"desc":"1991"},{"value":"1992","count":1451,"desc":"1992"},{"value":"1993","count":2784,"desc":"1993"},{"value":"1994","count":2109,"desc":"1994"},{"value":"1995","count":2360,"desc":"1995"},{"value":"1996","count":1708,"desc":"1996"},{"value":"1997","count":2262,"desc":"1997"},{"value":"1998","count":2440,"desc":"1998"},{"value":"1999","count":2368,"desc":"1999"},{"value":"2000","count":3138,"desc":"2000"},{"value":"2001","count":4126,"desc":"2001"},{"value":"2002","count":6202,"desc":"2002"},{"value":"2003","count":7630,"desc":"2003"},{"value":"2004","count":9683,"desc":"2004"},{"value":"2005","count":11186,"desc":"2005"},{"value":"2006","count":13312,"desc":"2006"},{"value":"2007","count":16773,"desc":"2007"},{"value":"2008","count":15564,"desc":"2008"},{"value":"2009","count":17942,"desc":"2009"},{"value":"2010","count":23198,"desc":"2010"},{"value":"2011","count":25979,"desc":"2011"},{"value":"2012","count":24792,"desc":"2012"},{"value":"2013","count":32582,"desc":"2013"},{"value":"2014","count":46723,"desc":"2014"},{"value":"2015","count":53674,"desc":"2015"},{"value":"2016","count":83386,"desc":"2016"},{"value":"2017","count":102425,"desc":"2017"},{"value":"2018","count":118450,"desc":"2018"},{"value":"2019","count":75012,"desc":"2019"}]}]');
+    var isVip = false;
+    var isSvip = '';
+        $(function(){
+        if(requestFlag && window.location.hash){
+            updateDesc(1);
+            getSearchList();
+        }
+
+        if(requestFlag && !window.location.hash){
+            $('#appendBox').hide();
+        }
+        //翻页跳转
+        $('body').on('click','#jumpPage',function(){
+            var maxPage = parseInt('1');
+            var page = $(this).prev().val();
+            if(page>maxPage){
+                faldia('超出页码');
+                return;
+            }
+            var count = TotalRecords;
+            var limit = Math.ceil(parseInt(count)/10);
+            var groupId = '';
+            var userPageIndex = '5';
+            userPageIndex =parseInt(userPageIndex);
+            jumpPage2(limit,userPageIndex,page,groupId,1);
+        });
+        $('#searchTongji').on('shown.bs.modal',function(){
+            chartUtil.drawPie(chartUtil.transPieData(dataForChart[1].Items),"search-industry",1,'');
+            chartUtil.drawMap(chartUtil.transMapData(dataForChart[0].Items),"search-province",7,'');
+            chartUtil.drawPie(chartUtil.transPieData(dataForChart[2].Items),"search-status",1,'');
+            chartUtil.drawBar(chartUtil.transBarData(dataForChart[3].Items),"search-year",1,'');
+        });
+        initFundRange();
+        initRegistDate();
+        setpostCardForm();
+        $(".custom.a>span[data-toggle=dropdown]").removeAttr('data-toggle')
+
+        getBrandRanking();
+        setPhoneview();
+        ieFixImg('.bimg');
+        zhugeTrack('查企业-搜索列表页',{'查询结果':parseInt(TotalRecords) > 0 ? '有' : '无','搜索关键词':'东莞公司'});
+    });
+</script> <link rel="stylesheet" href="/material/theme/chacha/cms/v2/css/footer.css?time=1568790807" type="text/css"/> <link rel="stylesheet" href="/material/theme/chacha/cms/v2/css/animate.css?time=1508428800" type="text/css"/> <footer class="footer"> <div class="container"> <div class="footer-top clearfix"> <div class="about" style=""> <h4>关于我们</h4> <ul class="list-unstyled"> <li><a rel="nofollow" onclick="zhugeTrack('主页-关于我们',{'子类名称':'联系我们'});" href="/cms?id=13">联系我们</a></li> <li><a rel="nofollow" onclick="zhugeTrack('主页-关于我们',{'子类名称':'用户协议'});" href="/cms?id=14">用户协议</a></li> <li><a rel="nofollow" onclick="zhugeTrack('主页-关于我们',{'子类名称':'用户隐私权'});" href="/cms?id=15">用户隐私权</a></li> <li><a onclick="zhugeTrack('主页-关于我们',{'子类名称':'友情链接'});" href="/cms?id=16">友情链接</a></li> <li><a rel="nofollow" onclick="zhugeTrack('主页-关于我们',{'子类名称':'关于我们'});" href="/cms?id=892">关于我们</a></li> <li><a rel="nofollow" onclick="zhugeTrack('主页-关于我们',{'子类名称':'用户帮助'});" href="/cms?id=14578">用户帮助</a></li> <li><a rel="nofollow" onclick="zhugeTrack('主页-关于我们',{'子类名称':'名词百科'});" href="/cms?id=146498">名词百科</a></li> <li><a rel="nofollow" onclick="zhugeTrack('主页-关于我们',{'子类名称':'产品标签'});" href="/cms?id=146499">产品标签</a></li> <li><a rel="nofollow" onclick="zhugeTrack('主页-关于我们',{'子类名称':'安全问题反馈'});" href="/cms?id=146516">安全问题反馈</a></li> </ul> </div> <div class="contact"> <h4>联系方式</h4> <ul class="list-unstyled"> <li>企查查官方客服：400-928-2212</li> <li>工作时间: 周一至周五 9:00-20:00</li> <script type="text/javascript" src="/material/js/jquery.cookie.js"></script> <script type="text/javascript" src="/material/js/jquery.validate.min.js"></script> <script type="text/javascript" src="/material/js/jquery.form.min.js"></script> <script type="text/javascript" src="/material/js/global.js?t=1568790807"></script> <li>在线客服：<a data-toggle="modal" data-target="#loginModal" onclick="getCaptcha()">点击在线咨询</a></li> <li>客服邮箱：<a href="mailto:kf@qichacha.com">kf@qichacha.com</a></li> <li>微信公众号：qcc365</li> <li>地址：江苏省苏州市工业园区东长路88号2.5产业园C1幢5楼</li> </ul> </div> <div class="service" style=""> <h4>查查服务</h4> <ul class="list-unstyled"> <li> <a rel="nofollow" onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业问答'});" href="https://www.qichacha.com/more_hotqa" target="_blank">企业问答</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'500强企业'});" href="https://www.qichacha.com/cms_top500" target="_blank">500强企业</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'疫苗查查'});" href="http://ai.qichacha.com/" target="_blank">疫苗查查</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'融资查询'});" href="https://www.qichacha.com/elib_financing" target="_blank">融资查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业风控'});" href="http://pro.qichacha.com/?source=websiteFoot" target="_blank">企业风控</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业库'});" href="http://www.qichacha.com/elib" target="_blank">企业库</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'裁判文书查询'});" href="http://www.qichacha.com/more_wenshus" target="_blank">裁判文书查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'新三板企业查询'});" href="http://sanban.qichacha.com" target="_blank">新三板企业查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'上市企业查询'});" href="http://ipo.qichacha.com/" target="_blank">上市企业查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企查查企业查询'});" href="https://www.qichacha.com/gongsi" target="_blank">企查查企业查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企查查移动版'});" href="https://m.qichacha.com" target="_blank">企查查移动版</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企查查社区'});" href="https://www.qichacha.com/dianping" target="_blank">企查查社区</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业风险搜索'});" href="https://www.qichacha.com/more_shixins" target="_blank">企业风险搜索</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'商标专利搜索'});" href="https://www.qichacha.com/more_brands" target="_blank">商标专利搜索</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业网址导航'});" href="https://www.qichacha.com/daohang" target="_blank">企业网址导航</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业高管查询'});" href="https://www.qichacha.com/boss" target="_blank">企业高管查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业税号查询'});" href="https://www.qichacha.com/tax" target="_blank">企业税号查询</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业新闻头条'});" href="https://www.qichacha.com/news" target="_blank">企业新闻头条</a> <a rel="nofollow" onclick="zhugeTrack('主页-查查服务',{'子类名称':'企查查下载'});" href="https://www.qichacha.com/weixin" target="_blank">企查查下载</a> <a onclick="zhugeTrack('主页-查查服务',{'子类名称':'企业失信查询'});" href="https://www.qichacha.com/more_shixins" target="_blank">企业失信查询</a> <a rel="nofollow" onclick="zhugeTrack('主页-查查服务',{'子类名称':'企查查接口平台'});" href="http://openapi.qichacha.com/?source=websiteFoot" target="_blank">企查查接口平台</a> <a href="/yellowpage">公司黄页</a> <a href="/cms_dirhot">人员名录</a> <a rel="nofollow" href="http://open.qichacha.com" target="_blank"> 开放平台</a> </li> </ul> </div> <div class="qrcode"> <div class="qrcode-item"> <img src="/material/theme/chacha/cms/v2/images/v3/code_xcx.png?t=3" alt="企查查APP下载"> <span class="ma_xcx">小程序</span> </div> <div class="qrcode-item"> <img src="/material/theme/chacha/cms/v2/images/v3/code_app.png?t=3" alt="企查查APP下载"> <span class="ma_app">扫码下载APP</span> </div> <div class="qrcode-item"> <img src="/material/theme/chacha/cms/v2/images/v3/code_wx.png?t=3" alt="企查查微信公众号"> <span class="ma_wx">微信公众号</span> </div> </div> </div> <div class="footer-link"> <div class="footer-row clearfix"> <div class="footer-row-head">
+                    数据来源：
+                </div> <div class="footer-row-content"> <span class="item">全国企业信用信息公示系统</span> <span class="item">中国裁判文书网</span> <span class="item">中国执行信息公开网</span> <span class="item">国家知识产权局</span> <span class="item">商标局</span> <span class="item">版权局</span> </div> </div> </div> </div> <div class="footer-copy-bg"> <div class="container"> <div class="footer-copy clearfix"> <div class="pull-left"> <div class="m-t-xs font-13"> <a href="javascript:void(0)" title="企查查">&copy;2014-2019</a> <a href="http://www.beian.miit.gov.cn/" rel="nofollow" target="_blank"> 苏ICP备15042526号-4</a>
+                        版权所有&nbsp;苏州朗动网络科技有限公司
+                        &nbsp;增值电信业务经营许可证：<a href="http://www.beian.miit.gov.cn/" rel="nofollow" target="_blank">苏ICP证B2-20180251</a>
+                        &nbsp;企业征信备案号：<a href="http://nanjing.pbc.gov.cn/nanjing/117542/117601/117604/3862817/index.html" rel="nofollow" target="_blank">04005</a> <br>
+                        违法和不良信息举报电话：400-928-2212&nbsp;&nbsp;举报邮箱：<a href="mailto:jubao@qichacha.com">jubao@qichacha.com</a> </div> </div> <div class="auth"> <a style="margin-left: 0px;" href="https://ss.knet.cn/verifyseal.dll?sn=e17091132050068868mhtm000000&comefrom=trust" rel="nofollow" target="_blank"> <img class="m-l-sm" style="width: 98px" src="/material/theme/chacha/cms/v2/images/dependable.png"/> </a> <a href="http://www.jsdsgsxt.gov.cn/mbm/entweb/elec/certView.shtml?siteId=2f2c5b85a5154355a56eb3dee98ad8a3" rel="nofollow" target="_blank"> <img class="m-l-sm" style="width: 30px" src="/material/theme/chacha/cms/v2/images/jsdsgsxt.png"/> </a> <a href="https://v.yunaq.com/certificate?domain=www.qichacha.com" rel="nofollow" target="_blank"> <img class="m-l-sm" style="width: 106px;" src="/material/theme/chacha/cms/v2/images/gw_124x47.png"/> </a> </div> </div> </div> </div> </footer> <div class="modal fade" id="feedModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog nmodal sm"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">x</span></button> <h4 class="modal-title" id="myModalLabel">意见反馈</h4> </div> <form class="form-horizontal pform" role="form"> <div class="modal-body"> <div class="form-group"> <label class="col-pre">问题类别<span class="redstar">*</span></label> <div class="col-after"> <input type="hidden" class="category" name="category" value=""> <div id="indexErrorCategory"> <a data-value="1" onclick="setIndexErrorCat(this)" class="se-item">功能改进</a> <a data-value="2" onclick="setIndexErrorCat(this)" class="se-item">数据问题</a> <a data-value="3" onclick="setIndexErrorCat(this)" class="se-item">搜索问题</a> <a data-value="4" onclick="setIndexErrorCat(this)" class="se-item">投诉反馈</a> <a data-value="5" onclick="setIndexErrorCat(this)" class="se-item">其他</a> </div> <span class="categorymsg text-danger"></span> </div> </div> <div class="form-group"> <label class="col-pre">反馈内容<span class="redstar">*</span></label> <div class="col-after"> <textarea class="form-control content" rows="5"  name="content" placeholder="亲爱的用户：请在这里直接填写您遇到的问题或意见建议，您的意见是我们前进的动力"></textarea> <span class="contentmsg text-danger"></span> </div> </div> <div class="form-group"> <label class="col-pre">手机号码<span class="redstar">*</span></label> <div class="col-after"> <input type="text" class="form-control phone" name="phone" placeholder="请输入手机号码，方便我们联系您。" value=""> <span class="phonemsg text-danger"></span> </div> </div> <div class="form-group"> <label class="col-pre">&nbsp;</label> <div class="col-after"> <span class="text-gray font-12">亲爱的顾客，您也可以直接拨打企查查官方电话：400-928-2212 或者 联系企查查官方客服QQ：4009985212，我们将及时为您解答问题。</span> </div> </div> </div> <div class="modal-footer"> <button type="button" class="btn btn-primary btn-guest">提交</button> </div> </form> <form class="pform-uploadimg" enctype="multipart/form-data" id="uploadVisitAddPic"> <input type="file" id="addVisitPic" name="pic"> </form> </div> </div> </div> <div style="display:none;"> <script src="https://s4.cnzz.com/z_stat.php?id=1254842228&web_id=1254842228" language="JavaScript"></script> <script>
+      var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?3456bee468c83cc63fb5147f119f1075";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+  </script> <script>(function(){
+          var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?db135ad770b0860a90c3a2ca38cf577c":"https://jspassport.ssl.qhimg.com/11.0.1.js?db135ad770b0860a90c3a2ca38cf577c";
+          document.write('<script src="' + src + '" id="sozz"><\/script>');
+      })();
+  </script> </div> <script type="text/javascript">
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script> <link rel="stylesheet" type="text/css" href="/material/theme/chacha/cms/v2/css/rnav.css?timestamp=1568790807"> <div id="RNav" class="i_hide"> <div class="i_menu"> <ul class="i_bts-outer" style="bottom:69px;"> <li class="i_bt_sm i_bt_xcx"><i></i> <label>小程序</label><img src="/material/theme/chacha/cms/v2/images/leftnav/bg_xcx.png?t=2" alt="企查查"></li> <li class="i_bt_sm i_bt_wx"><i></i> <label>公众号</label><img src="/material/theme/chacha/cms/v2/images/leftnav/bg_wx.png?t=2" alt="企查查"></li> <li onclick="zhugeTrack('下载APP悬浮按钮');" class="i_bt_sm i_bt_dow"><i></i> <label>APP</label><img src="/material/theme/chacha/cms/v2/images/leftnav/bg_app.png?t=3" alt="企查查"></li> <script type="text/javascript" src="/material/js/jquery.cookie.js"></script> <script type="text/javascript" src="/material/js/jquery.validate.min.js"></script> <script type="text/javascript" src="/material/js/jquery.form.min.js"></script> <script type="text/javascript" src="/material/js/global.js?t=1568790807"></script> <li id="RNBack" class="i_bt_sm i_bt_kf" data-toggle="modal" data-target="#loginModal" onclick="getCaptcha()"><i></i> <label>反馈</label></li> <li class="i_bt_sm i_bt_back" data-toggle="modal" data-target="#loginModal" onclick="getCaptcha()"><i></i> <label>客服</label></li> <li id="RNTop" class="i_bt_sm i_bt_top"><i></i> <label>置顶</label></li> </ul> </div> <div class="i_container"> <div class="i_nodata">暂无数据</div> <div id="RNFoc" class="i_wrap"> <div class="i_title">我的关注</div> <div class="i_com-wrap"> <div style="height:1px;width:240px;"></div> </div> <div class="i_botbt"> <a href="/user_follow">打开全部</a> </div> </div> <div id="RNCom" class="i_wrap"> <div class="i_title">企业对比</div> <div class="i_toast">
+				还可以添加<span id="ComLastCount">5</span>家企业 
+				<a id="ClearCompares" class="c_a">清空</a> </div> <div class="i_com-wrap"> <div class="i_com i_addcom" data-toggle="modal" data-target="#loginModal" onclick="getCaptcha()"> <img src="/material/theme/chacha/cms/v2/images/leftnav/icon-add.png" alt="企查查"/> <a class="c_a" href="javascript:;">添加企业</a> </div> <div style="height:1px;width:240px;"></div> </div> <div class="i_botbt"> <a href="javascript:;" data-toggle="modal" data-target="#loginModal" onclick="getCaptcha()">对比企业</a> </div> </div> <div id="RNRel" class="i_wrap"> <div class="i_title">找关系</div> <div class="i_toast">
+				还可以添加<span id="RelLastCount">5</span>家企业 
+				<a class="c_a" id="ClearRels">清空</a> </div> <div class="i_com-wrap"> <div class="i_com i_addcom" data-toggle="modal" data-target="#loginModal" onclick="getCaptcha()"> <img src="/material/theme/chacha/cms/v2/images/leftnav/icon-add.png" alt="企查查"/> <a class="c_a" href="javascript:;">添加企业或个人</a> </div> <div style="height:1px;width:240px;"></div> </div> <div class="i_botbt"> <a href="javascript:;" data-toggle="modal" data-target="#loginModal" onclick="getCaptcha()">找关系</a> </div> </div> </div> <div class="modal fade" id="qaddComPanel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content" style="width:600px;"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">x</span></button> <h4 class="modal-title">添加企业</h4> </div> <div class="modal-body" style="height: 330px"> <form class="form-horizontal" role="form"> <div class="form-group"> <div class="col-sm-12 m-t-md"> <input type="text" id="qcomName" name="comName" class="form-control" value="" placeholder="请输入公司/人" autocomplete="off" oninput="qsearchCom(event,this)"/> <section class="panel hidden-xs" id="qsearchList" style="position: absolute;width: 560px;z-index: 10;display: none;"></section> </div> <div class="col-sm-12 text-center m-t-lg" style="padding-left: 18px;padding-right: 18px;"> <span id="qaddComPanelConfirm" class="btn-primary btn-guest btn-block" style="padding-top: 5px;padding-bottom: 5px;cursor:pointer;">添加企业</span> </div> </div> </form> </div> </div> </div> </div> <div class="modal fade" id="addRelPanel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content" style="width:600px;"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">x</span></button> <h4 class="modal-title">添加企业或个人</h4> </div> <div class="modal-body" style="height: 445px"> <form class="form-horizontal" role="form"> <div class="form-group"> <div class="col-sm-12 m-t-md"> <input type="text" id="qrcomName" name="comName" class="form-control" value="" placeholder="请输入公司名称" autocomplete="off" oninput="qrsearchCom(event,this)"/> <section class="panel hidden-xs" id="qrsearchList" style="position: absolute;width: 560px;z-index: 10;display: none;"></section> </div> </div> </form> </div> </div> </div> </div> </div> <script type="text/javascript">
+	 /*rightNav.js 使用变量*/
+	 var personImg =  "/material/theme/chacha/cms/v2/images/leftnav/person.png";
+	 var frimUrl = "";
+	 var comDefaultImg = "/material/theme/chacha/cms/v2/images/company.jpg"
+          
+    function jumpTax(){
+        window.location.href=encodeURI(INDEX_URL+"tax");
+    }       
+</script> <script src="/material/theme/chacha/cms/v2/js/rightNav.js?timestamp=1497542400"></script> <link type="text/css" href="/material/theme/chacha/cms/v2/css/login.css?version=1568790807" rel="stylesheet" /> <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static"> <div class="modal-dialog login-madal-dialog"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">x</span></button> <h4 class="modal-title" id="myModalLabel">登录企查查</h4> </div> <div class="modal-body"> <div class="login-sao-panel"> <div class="title">扫码登录请使用<br> <a rel="nofollow" href="/app" target="_blank" class="text-primary">企查查APP</a> > 我的 > 扫一扫</div> <div class="qrcodewrap"> <div class="qrcode" id='qrcodeModalLogin'></div> <img class="qrcodets" src="/material/theme/chacha/cms/v2/images/qrcode_ts.png?time=1568790807"> </div> <div class="tip"><span></span> 扫一扫功能支持企查查 APP11.0.6 及以上版本</div> </div> <div class="login-panel" style="display: none;" id="normalLoginPanel"> <div class="login-panel-head clearfix"> <div class="login-tab"> <a href="javascript:;" id="verifyLogin">快捷登录</a> </div> <div class="login-tab"> <a href="javascript:;" class="active">密码登录</a> </div> </div> <div class="login-panel-body"> <form class="form-group login-form" role="form" id="user_login_normal"> <div class="form-group"> <input type='hidden' class='phone_prefix_input' value="+86" name='phone_prefix' /> <div class="phone-select dropdown"> <a class="phone_prefix" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> 中国 +86<b class="caret text-primary"></b></a> <div class="phoneline"></div> <ul class="dropdown-menu"></ul> </div> <input id="nameNormal" name="nameNormal" type="text" class="form-control form-control-error" placeholder="请输入手机号码"> <span msgfor="nameNormal"></span> </div> <div class="form-group m-t-md"> <div class="show-pwd"></div> <input id="pwdNormal" name="pwdNormal" type="password" class="form-control form-control-error" placeholder="请输入密码"> <span msgfor="pwdNormal"></span> </div> <div class="form-group m-t-md"> <div id="dom_id_one"></div> </div> <div class="checkbox m-t-md"> <label class="text-dark-lter"> <input type="checkbox" name="keep" checked="checked" value="option1"> 一周内保持登录状态
+                                </label> </div> <button type="submit" class="btn btn-primary btn-block m-t-md login-btn"> <strong>立即登录</strong></button> <input type='hidden' id='csessionid_one' name='csessionid_one' /> <input type='hidden' id='sig_one' name='sig_one' /> <input type='hidden' id='token_one' name='token_one' /> <input type='hidden' id='scene_one' name='scene_one' /> <input type='hidden' name='verify_type' value="1" /> </form> <div class="login-other m-t-md"> <div class="clearfix"> <div class="pull-left"> <a rel="nofollow" href="/user_register" class="text-primary">账号注册</a> </div> <div class="pull-left text-dark-lt m-l-sm"> <a rel="nofollow" href="/user_forgetpassword">忘记密码？</a> </div> <div class="pull-right"> <a rel="nofollow" href="https://open.weixin.qq.com/connect/qrconnect?appid=wx9b26295cdfab4175&redirect_uri=http://www.qichacha.com/user_wxloginok?back=&response_type=code&scope=snsapi_login&state=#wechat_redirect" class="btn-wx"></a> <a rel="nofollow" href="/user_qqlogin?back=&replace=1" class="btn-qq m-l-xs"> </a> <a rel="nofollow" href="/user_weiboLogin" class="btn-weibo m-l-xs"> </a> </div> </div> </div> </div> </div> <div class="login-panel" id="verifyLoginPanel"> <div class="login-panel-head clearfix"> <div class="login-tab"> <a href="javascript:;" class="active">快捷登录</a> </div> <div class="login-tab"> <a href="javascript:;" id="normalLogin">密码登录</a> </div> </div> <div class="login-panel-body"> <form class="form-group login-form" role="form" id="user_login_verify"> <div class="form-group"> <input type='hidden' class='phone_prefix_input' value="+86" name='phone_prefix' /> <div class="phone-select dropdown"> <a class="phone_prefix" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> 中国 +86<b class="caret text-primary"></b></a> <div class="phoneline"></div> <ul class="dropdown-menu"></ul> </div> <input id="nameVerify" name="nameVerify" onkeyup="phoneKeyup()" oninput="phoneKeyup()" type="text" class="form-control form-control-error" placeholder="请输入手机号码"> <span msgfor="nameVerify"></span> </div> <div class="form-group m-t-md"> <div id="dom_id_two"></div> </div> <div class="form-group m-t-md"> <input id="vcodeNormal" maxlength="6" name="codeVerify" type="text" class="form-control form-control-error" placeholder="短信验证码"> <a href="javascript:;" class="text-primary vcode-btn get-mobile-code">
+                         获取验证
+                      </a> <span msgfor="codeVerify"> </span> </div> <div class="checkbox m-t-md"> <label class="text-dark-lter"> <input type="checkbox" name="keep" checked="checked" value="option1"> 一周内保持登录状态
+                                </label> </div> <button type="submit" class="btn btn-primary btn-block m-t-md login-btn"> <strong>立即登录</strong></button> <input type='hidden' id='csessionid_two' name='csessionid_two' /> <input type='hidden' id='sig_two' name='sig_two' /> <input type='hidden' id='token_two' name='token_two' /> <input type='hidden' id='scene_two' name='scene_two' /> </form> <div class="login-other m-t-md"> <div class="clearfix"> <div class="pull-left"> <a rel="nofollow" onclick="" href="/user_register" class="text-primary">账号注册</a> </div> <div class="pull-left text-dark-lt m-l-sm"> <a rel="nofollow" onclick="" href="/user_forgetpassword">忘记密码？</a> </div> <div class="pull-right"> <a rel="nofollow" onclick="" href="https://open.weixin.qq.com/connect/qrconnect?appid=wx9b26295cdfab4175&redirect_uri=http://www.qichacha.com/user_wxloginok?back=&response_type=code&scope=snsapi_login&state=#wechat_redirect" class="btn-wx"></a> <a rel="nofollow" onclick="" href="/user_qqlogin?back=&replace=1" class="btn-qq m-l-xs"> </a> <a onclick="" routerLink="/user" class="btn-weibo m-l-xs"> </a> </div> </div> </div> </div> </div> </div> </div> </div> </div> <link type="text/css" href="//g.alicdn.com/sd/ncpc/nc.css?t=1520579483" rel="stylesheet" /> <script type="text/javascript" src="//g.alicdn.com/sd/ncpc/nc.js?t=1520579483"></script> <div id="_umfp" style="display:inline;width:1px;height:1px;overflow:hidden"></div> <script type="text/javascript" src="/material/theme/chacha/cms/v2/js/login.js?version=1568790807"></script> <script>
+
+    //普通登录
+    formset({
+        "id":"user_login_normal",
+        "url":"user_loginaction",
+        "rule":{
+            "nameNormal":{
+                required:true,
+            },
+            "pwdNormal":{
+                required:true,
+                minlength:6
+            }
+        },
+
+        "messages":{
+            "nameNormal":{
+                required:"请输入手机号",
+            },
+            "pwdNormal":{
+                required:"请输入密码",
+                minlength:"密码最少6位"
+            }
+        },
+        "sucfunc":function(rs){
+            $('#loginModalClose').click();
+            location.reload();
+        },
+        "falfunc":function(rs){
+            faldia({'content':'登录失败：'+rs.msg});
+            getAliCaptcha('one');
+            document.getElementById('csessionid_one').value = '';
+            document.getElementById('sig_one').value = '';
+            document.getElementById('token_one').value = '';
+            document.getElementById('scene_one').value = '';
+        }
+    });
+    //手机验证码登录
+    formset({
+        "id":"user_login_verify",
+        "url":"user_loginbyverify",
+        "rule":{
+            "nameVerify":{
+                required:true,
+            },
+            "codeVerify":{
+                required:true,
+                minlength:6
+            }
+        },
+
+        "messages":{
+            "nameVerify":{
+                required:"请输入手机号",
+            },
+            "codeVerify":{
+                required: "请输入手机激活码",
+                minlength: "手机激活码最少{0}个字"
+            }
+        },
+        "sucfunc":function(rs){
+            $('#loginModalClose').click();
+            location.reload();
+        },
+        "falfunc":function(rs){
+            faldia({'content':'登录失败：'+rs.msg});
+            getAliCaptcha('two');
+            document.getElementById('csessionid_two').value = '';
+            document.getElementById('sig_two').value = '';
+            document.getElementById('token_two').value = '';
+            document.getElementById('scene_two').value = '';
+        }
+    });
+
+    var codeStatus = true;//状态
+    var waitSec = 60; //设置秒数(单位秒)
+    var i = 1;
+    var clock;
+
+    function sTimer() {
+        var r = waitSec - i;
+        if (r == 0) {
+            clearInterval(clock);
+            $(".get-mobile-code").html("重新获取");
+            codeStatus = true;
+            $(".get-mobile-code").data('clicked', false).removeClass('disabled');
+        } else {
+            $(".get-mobile-code").html("(" + r + ")秒重新发送");
+            i++;
+        }
+    };
+    function startClock(t) {
+        codeStatus = false;
+        i = parseInt(t);
+        clock = setInterval(sTimer, 1000);
+    }
+
+    function phoneKeyup(){
+      
+    }
+
+    
+
+    //获取手机验证码
+    function mobileCode() {
+        $(".get-mobile-code").bind('click', function () {
+            if ($(this).data('clicked')) return false;
+            var phone = $("input[name=nameVerify]").val();
+            var scene = $("input[name='scene_two']").val();
+            var token = $("input[name='token_two']").val();
+            var sig = $("input[name='sig_two']").val();
+            var csessionid = $("input[name='csessionid_two']").val();
+            var phone_prefix = $("input[name='phone_prefix']").val();
+            var afsFlag = '';
+
+            if ($("input[name=nameVerify]").hasClass('validate-error')) {
+                faldia('请重新输入手机号码！');
+                return false;
+            }
+
+            if (!phone) {
+                faldia('手机号码不能为空！');
+                return false;
+            }
+
+            if(afsFlag){
+                if(!scene || !token || !sig || !csessionid){
+                    faldia('请先拖动滑块！');
+                    return false;
+                }
+            }
+
+            $.post(INDEX_URL + '/user_regmobileCode', {
+                scene:scene,
+                token:token,
+                sig:sig,
+                csessionid:csessionid,
+                phone: phone,
+                type: 4,
+                verify_type:1,
+                phone_prefix:phone_prefix
+            }, function (data) {
+                if (data.success) {
+                    $("input[name=mobilecode]").removeAttr('disabled');
+                    startClock(1);
+                    $(".get-mobile-code").data('clicked', true).addClass('disabled').html("(" + waitSec + ")秒重新发送");
+                } else {
+                    faldia(data.msg);
+                    getAliCaptcha('two');
+                    $("input[name=mobilecode]").removeAttr('disabled');
+                    $(".get-mobile-code").html("重新获取").data('clicked', false).removeClass('disabled');
+                }
+            }, 'json');
+            return false;
+        });
+    }
+
+    mobileCode();
+</script> <script>
+
+    function getCaptcha() {
+        getAliCaptcha('two');
+
+    }
+
+    function getAliCaptcha(num){
+        var renderDom = '#dom_id_'+num;
+        var csessionidDom = 'csessionid_'+num;
+        var sigDom = 'sig_'+num;
+        var tokenDom = 'token_'+num;
+        var sceneDom = 'scene_'+num;
+        var nc = new noCaptcha();
+        var nc_appkey = 'QNYX';  // 应用标识,不可更改
+        var nc_scene = 'login';  //场景,不可更改
+        var nc_token = [nc_appkey, (new Date()).getTime(), Math.random()].join(':');
+        var nc_option = {
+            renderTo: renderDom,
+            appkey: nc_appkey,
+            scene: nc_scene,
+            token: nc_token,
+            callback: function (data) {
+                document.getElementById(csessionidDom).value = data.csessionid;
+                document.getElementById(sigDom).value = data.sig;
+                document.getElementById(tokenDom).value = nc_token;
+                document.getElementById(sceneDom).value = nc_scene;
+            }
+        };
+        nc.init(nc_option);
+    }
+    
+    $('#verifyLogin').on('click',function(){
+        getAliCaptcha('two');
+        if($("input[name=nameNormal]").val()){
+          $("input[name=nameVerify]").val($("input[name=nameNormal]").val());
+        }else{
+          setTimeout(function() {$("input[name=nameVerify]").focus();}, 10);
+        }
+        $('#verifyLoginPanel').show();
+        $('#normalLoginPanel').hide();
+        window.localStorage.setItem('logintype',0);
+    });
+    $('#normalLogin').on('click',function(){
+        getAliCaptcha('one');
+        if($("input[name=nameVerify]").val()){
+          $("input[name=nameNormal]").val($("input[name=nameVerify]").val());
+        }
+        $('#normalLoginPanel').show();
+        $('#verifyLoginPanel').hide();
+        window.localStorage.setItem('logintype',1);
+    });
+
+    $('#normalLoginPanel .phone-select').phoneSelect();
+    $('#verifyLoginPanel .phone-select').phoneSelect();
+    
+    $('.show-pwd').click(function(){
+        if($('.show-pwd').hasClass('active')){
+            $('.show-pwd').removeClass('active');
+            $('.show-pwd').next().attr('type','password');
+        }else{
+            $('.show-pwd').addClass('active');
+            $('.show-pwd').next().attr('type','text');
+        }
+    });
+    var loginJumpUrl;
+    $('#loginModal').on('show.bs.modal', function (e) {
+        loginQrcodeGenerate('qrcodeModalLogin');
+        loginQrcodePoll('qrcodeModalLogin');
+    })
+    $('#loginModal').on('hidden.bs.modal', function (e) {
+        clearInterval(loginQrcodePollTimer);
+    })
+    setLoginType();
+</script> <style type="text/css">
+
+
+    .step2{display: none;}
+</style> <link type="text/css" href="/material/theme/chacha/cms/v2/css/vip-modal.css?version=1568790807" rel="stylesheet"/> <div class="modal fade" id="vipModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog nmodal"> <div class="modal-content"> <div class="vip-top"> <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">x</span></button> <div class="vip-title"> <div class="title">立即成为VIP</div> <div class="sub-title"><span>更多特权 超值服务</span><a rel="nofollow" href="/vip">全部特权></a></div> </div> <div class="vip-buy-panel"> <div class="vip-year-list clearfix"> <div data-id="17" data-year="3" data-price="720" class="vip-kuang vip-year active"> <div class="price"> <span>720元</span> <span class="vip-pay">/</span>
+                                3年
+                            </div> <div class="origin-price">原价：2160元</div> <div class="vip-rec"></div> </div> <div data-id="7" data-year="2" data-price="540" class="vip-kuang vip-year"> <div class="price"> <span>540元</span> <span class="vip-pay">/</span>
+                                2年
+                            </div> <div class="origin-price">原价：1440元</div> </div> <div data-id="6" data-year="1" data-price="360" class="vip-kuang vip-year"> <div class="price"> <span>360元</span> <span class="vip-pay">/</span>
+                                1年
+                            </div> <div class="origin-price">原价：720元</div> </div> </div> <div class="step1 m-t-md"> <a onclick="modalJumpVip()" class="vip-btn">立即开通</a> <div class="vip-publicity">支付后可开发票</div> </div> <form class="pay-form vip-pay-info step2" target="aliPayFrame" role="form" method="post" action="/order_pay"> <div class="clearfix"> <span class="pre">购买账号：</span><span class="after"></span> </div> <div class="clearfix coupon-drop" > <span class="pre">优惠券：</span><span  data-toggle="dropdown" class="after drop"><span class="couponText">暂无优惠券</span><span class="caret"></span></span> <ul class="dropdown-menu couponList"> <li> <span class="coupon-type">暂无优惠券</span> </li> </ul> </div> <div class="clearfix  m-b-xs"> <span class="pre">实付金额：</span><span class="after vip-pay payYear">¥720.00</span> </div> <input type="hidden" name="order_type" value="2"/> <input type="hidden" name="goods_id" value="17"/> <input type="hidden" name="pay_type" value="2"/> <input type="hidden" name="coupon_code" value=""/> <input type="submit" class="btn btn-primary packages-btn" value="立即支付" style="display: none"/> </form> </div> </div> <div class="vip-pay-container clearfix"> <div class="step1"> <img class="demo-img" src="/material/theme/chacha/cms/v2/images/vip/fxsm.png"/> <a class="vip-demo-link" href=""></a> </div> <div class="step2"> <div class="vip-payj-left"> <div onclick="checkPay(2)" class="pay-type pay-type-wx active"></div> <div onclick="checkPay(1)" class="pay-type pay-type-ali m-t-xs"></div> <div class="m-t-lg"> <p>1.完成支付后可在我的-我的发票中申请发票</p> <p>2.VIP会员自支付完成之时起5分钟内生效</p> </div> </div> <div class="vip-payj-qrcode"> <div class="wx_pay_box"> <div id="wx_pay_img" class="wx_pay_img"></div> <img class="pay-load" src="/material/theme/chacha/cms/v2/images/preloader.gif"> </div> <div class="ali_pay_box" loading-img="/material/theme/chacha/cms/v2/images/preloader.gif"> <img class="pay-load" src="/material/theme/chacha/cms/v2/images/preloader.gif"> </div> </div> </div> </div> </div> </div> </div> <div class="modal fade" id="svipModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog nmodal"> <div class="modal-content"> <div class="vip-top svip"> <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">x</span></button> <div class="vip-title"> <div class="title">立即成为SVIP</div> <div class="sub-title"><span>更多特权 超值服务</span><a rel="nofollow" href="/vip_svip">全部特权></a></div> </div> <div class="vip-buy-panel"> <div class="vip-year-list clearfix"> <div data-id="33" data-year="3" data-price="3600" class="vip-kuang vip-year active"> <div class="price"> <span>3600元</span> <span class="vip-pay">/</span>
+                                3年
+                            </div> <div class="origin-price">原价：10800元</div> <div class="vip-rec"></div> </div> <div data-id="32" data-year="2" data-price="2700" class="vip-kuang vip-year"> <div class="price"> <span>2700元</span> <span class="vip-pay">/</span>
+                                2年
+                            </div> <div class="origin-price">原价：7200元</div> </div> <div data-id="31" data-year="1" data-price="1800" class="vip-kuang vip-year"> <div class="price"> <span>1800元</span> <span class="vip-pay">/</span>
+                                1年
+                            </div> <div class="origin-price">原价：3600元</div> </div> </div> <div class="step1 m-t-md"> <a onclick="modalJumpVip()" class="vip-btn">立即开通</a> <div class="vip-publicity">支付后可开发票</div> </div> <form class="pay-form vip-pay-info step2" target="aliPayFrameSVIP" role="form" method="post" action="/order_pay"> <div class="clearfix"> <span class="pre">购买账号：</span><span class="after"></span> </div> <div class="clearfix coupon-drop" > <span class="pre">优惠券：</span><span  data-toggle="dropdown" class="after drop"><span class="couponText">暂无优惠券</span><span class="caret"></span></span> <ul class="dropdown-menu couponList"> <li> <span class="coupon-type">暂无优惠券</span> </li> </ul> </div> <div class="clearfix m-b-xs" style="display: none;"> <span class="pre">原方案抵扣：</span><span class="after text-gray deduction">-￥1</span> </div> <div class="clearfix  m-b-xs"> <span class="pre">实付金额：</span><span class="after vip-pay payYear">¥3600.00</span> </div> <input type="hidden" name="order_type" value="7"/> <input type="hidden" name="goods_id" value="33"/> <input type="hidden" name="pay_type" value="2"/> <input type="hidden" name="coupon_code" value=""/> <input type="submit" class="btn btn-primary packages-btn" value="立即支付" style="display: none"/> </form> </div> </div> <div class="vip-pay-container clearfix"> <div class="step1"> <img class="demo-img" src="/material/theme/chacha/cms/v2/images/vip/fxsm.png"/> <a class="vip-demo-link" href=""></a> </div> <div class="step2"> <div class="vip-payj-left"> <div onclick="checkPay(2)" class="pay-type pay-type-wx active"></div> <div onclick="checkPay(1)" class="pay-type pay-type-ali m-t-xs"></div> <div class="m-t-lg"> <p>1.完成支付后可在我的-我的发票中申请发票</p> <p>2.支付完成之时起5分钟内生效</p> </div> </div> <div class="vip-payj-qrcode"> <div class="wx_pay_box"> <div id="wx_pay_img_svip" class="wx_pay_img"></div> <img class="pay-load" src="/material/theme/chacha/cms/v2/images/preloader.gif"> </div> <div class="ali_pay_box" loading-img="/material/theme/chacha/cms/v2/images/preloader.gif"> <img class="pay-load" src="/material/theme/chacha/cms/v2/images/preloader.gif"> </div> </div> </div> </div> </div> </div> </div> <script type="text/javascript" src="/material/theme/chacha/cms/v2/js/pay.js?time=1568790807"></script> <script type="text/javascript">
+    var vipModalTitle;
+    var userid = '';
+    var $cmodal;
+
+    var isPayShow = false;
+    var wxOrderStatus = 0;
+    var wxOrderCode = '';
+    var wxpayLoad = false;
+    var alipayLoad = false;
+    var cPayType = 2;
+    var isModalShow = true;
+    var cGoods_id = "17";
+    var cYear = "3";
+    var cPrice = "720";
+    var vType = 'vip';
+    var cDeduction = 0;
+
+    function showVipModal(title, subTitle, img, linkName, linkUrl, isStep2){
+        if(img=='kzrt'){
+            img='kzrt2';
+        }
+        if(!userid){
+            getCaptcha();
+            $('#loginModal').modal('show');
+            return;
+        }
+        $cmodal = $("#vipModal");
+        vType = 'vip';
+        cGoods_id = "17";
+        cYear = "3";
+        cPrice = "720";
+
+        $cmodal.find('.step1').show();
+        $cmodal.find('.step2').hide();
+        
+        if(title){
+             $cmodal.find('.vip-title .title').text(title);
+            //vipModalTitle = title;
+        }
+        if(subTitle){
+             $cmodal.find('.vip-title .sub-title span').text(subTitle);
+        }
+        if(img){
+            if(title == '风险监控'){
+                var imgUrl = "/material/theme/chacha/cms/v2/images/vip/fxsm2.png";
+                 $cmodal.find(".demo-img").attr("src",imgUrl);
+            } else {
+                var imgUrl = "/material/theme/chacha/cms/v2/images/vip/"+img+".png";
+                 $cmodal.find(".demo-img").attr("src",imgUrl);
+            }
+        } else {
+            var imgUrl = "/material/theme/chacha/cms/v2/images/vip/default.png";
+             $cmodal.find(".demo-img").attr("src",imgUrl);
+        }
+        if(linkName && linkUrl){
+            $cmodal.find(".vip-demo-link").show();
+            $cmodal.find(".vip-demo-link").text(linkName + '>');
+            $cmodal.find(".vip-demo-link").attr('href',linkUrl);
+        } else {
+            $cmodal.find(".vip-demo-link").hide();
+        }
+
+        /*if(isStep2){
+            $("#vipModal .step1").hide();
+            $("#vipModal .step2").show();
+            strartBuy();
+        }*/
+
+        $cmodal.modal('show');
+
+        // 嵌入的关闭
+        $(".vip-insert-wrap .step1").show();
+        $(".vip-insert-wrap .step2").hide();
+    }
+
+    function showSVipModal(title, subTitle, img, linkName, linkUrl, isStep2){
+
+        if(!userid){
+            getCaptcha();
+            $('#loginModal').modal('show');
+            return;
+        }
+        $cmodal = $("#svipModal");
+        vType = 'svip';
+        cGoods_id = "33";
+        cYear = "3";
+        cPrice = "3600";
+        
+        $cmodal.find('.step1').show();
+        $cmodal.find('.step2').hide();
+        
+        if(title){
+             $cmodal.find('.vip-title .title').text(title);
+            //vipModalTitle = title;
+        }
+        if(subTitle){
+             $cmodal.find('.vip-title .sub-title span').text(subTitle);
+        }
+        if(img){
+            if(title == '风险监控'){
+                var imgUrl = "/material/theme/chacha/cms/v2/images/vip/ldjk.png";
+                 $cmodal.find(".demo-img").attr("src",imgUrl);
+            } else {
+                var imgUrl = "/material/theme/chacha/cms/v2/images/vip/"+img+".png";
+                 $cmodal.find(".demo-img").attr("src",imgUrl);
+            }
+        } else {
+            var imgUrl = "/material/theme/chacha/cms/v2/images/vip/default.png";
+             $cmodal.find(".demo-img").attr("src",imgUrl);
+        }
+        if(linkName && linkUrl){
+            $cmodal.find(".vip-demo-link").show();
+            $cmodal.find(".vip-demo-link").text(linkName + '>');
+            $cmodal.find(".vip-demo-link").attr('href',linkUrl);
+        } else {
+            $cmodal.find(".vip-demo-link").hide();
+        }
+
+        /*if(isStep2){
+            $("#vipModal .step1").hide();
+            $("#vipModal .step2").show();
+            strartBuy();
+        }*/
+
+        $cmodal.modal('show');
+
+        // 嵌入的关闭
+        $(".vip-insert-wrap .step1").show();
+        $(".vip-insert-wrap .step2").hide();
+    }
+
+    $('#vipModal,#svipModal').on('hide.bs.modal',function(){
+        clearPay();
+        isPayShow = false;
+    })
+
+    $('#vipModal .vip-year-list .vip-kuang,#svipModal .vip-year-list .vip-kuang').on('click',function(){
+        changeYear($(this).attr('data-id'),$(this).attr('data-year'),$(this).attr('data-price'),this);
+        var couponCode = $cmodal.find("input[name='coupon_code']").val();
+        if(couponCode == ''){
+            //checkPay(cPayType);
+        }
+    });
+
+    function modalJumpVip(){
+        isPayShow = true;
+
+        strartBuy();
+
+        $cmodal.find('.step1').hide();
+        $cmodal.find('.step2').show();
+
+        zhugeTrack('开通VIP-立即开通',{'弹窗标题名称':$cmodal.find('.vip-title .title').text()});
+        /*
+        location.href = INDEX_URL+'/vip?goods_id='+$("input[name='goods_id']").val();
+        if(vipModalTitle){
+            //zhugeTrack(vipModalTitle.split(' ')[0]+'-开通VIP');
+        }else{
+            //zhugeTrack('VIP弹框-开通VIP');
+        }*/
+    }
+    
+
+    var siModel = null;
+    function strartBuy(){
+        if(typeof siModel != 'undefined' && siModel){
+            clearInterval(siModel);
+            siModel = null;
+        }
+        if(typeof siInsert != 'undefined' && siInsert){
+            clearInterval(siInsert);
+            siInsert = null;
+        }
+        siModel = setInterval(function(){
+            getWxPayStatus();
+        }, 3000);
+        //checkPay(cPayType);
+        if(userGroupid==43){
+            getdeduction();
+        }
+        setTimeout(function() {
+            getcouponlist(cGoods_id);
+            
+        }, 500);
+    }
+</script> <style type="text/css"> </style> <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog nmodal ts-modal"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">x</span></button> <h4 class="modal-title">提示</h4> </div> <div class="modal-body clearfix"> <div class="title font-16 clearfix"> <div class="bd"> <span class="icon-warning"></span> </div> <div class="bd" style="padding-left: 10px;"> <span id="tkConfirmTitle">此操作永久删除，是否继续</span> </div> </div> <div class="btn-area m-t-md pull-right"> <a class="btn btn-default m-r-xs" data-dismiss="modal">取消</a> <a class="btn btn-primary" data-dismiss="modal" onclick="tkConfirmFuc()">确认删除</a> </div> </div> </div> </div> </div> <script type="text/javascript">
+    var tkConfirmFuc;
+    function tkConfirm(fuc,title) {
+        $('#confirmModal').modal('show');
+        tkConfirmFuc = fuc;
+        if(title){
+            $('#tkConfirmTitle').text(title);
+        }else{
+            $('#tkConfirmTitle').text('此操作永久删除，是否继续');
+        }
+    }
+    function tkConfirmOk(){
+        tkConfirmFuc();
+    }
+</script> <div id="openSuspend" class="openSuspend" style="cursor:pointer;"></div> <div class="bottomSuspend" id="bottomSuspend" style="margin-left: -100%;background-image: url('/material/theme/chacha/cms/v2/images/footer_app2_banner.png');"> <div id="attendDownload" class="attendDownload" data-href="https://www.qichacha.com/app?source=attendDownload"></div> <div id="closeSuspend" class="closeSuspend"></div> </div> <script type="text/javascript">
+    bottomSus();
+</script> </body> </html>
