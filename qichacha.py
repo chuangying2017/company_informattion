@@ -47,12 +47,12 @@ class AutomateChaCha:
         action = ActionChains(self.browser)  # 实例化一个action对象
         action.click_and_hold(button).perform()  # 鼠标左键按下不放
         action.reset_actions()  # 清除之前的action
-        ttt = [23, 81, 228]
-
-        for i in ttt:
-            action.move_by_offset(xoffset=i, yoffset=0).perform()  # 移动滑块
-            action.reset_actions()
-            time.sleep(0.4)
+        ttt = [23, 81, 204]
+        action.move_by_offset(xoffset=sum(ttt), yoffset=0).perform()  # 移动滑块
+        # for i in ttt:
+        #     action.move_by_offset(xoffset=i, yoffset=0).perform()  # 移动滑块
+        #     action.reset_actions()
+        #     time.sleep(0.4)
         action.release().perform()
         time.sleep(5)
         # 滑块，有刷新，有验证码
@@ -157,8 +157,28 @@ class AutomateChaCha:
     def combination_keyword(self):
         pass
 
+    def admin_login(self):
+        url = 'http://awpo.com.cn/admin/index'
+        login_url = 'http://awpo.com.cn/auth/login'
+        self.browser.delete_all_cookies()
+        self.browser.get(login_url)
+        with open('cookie_set_company.json', 'r') as pf:
+            cookie = json.loads(pf.read())
+            for dict_ in cookie:
+                self.browser.add_cookie({
+                    # 'domain': dict_.get('domain', ''),
+                    'name': dict_.get('name', ''),
+                    # 'expiry': dict_.get('expiry', ''),
+                    'path': dict_.get('path', ''),
+                    'value': dict_.get('value', ''),
+                    'secure': dict_.get('secure', '')
+                })
+        self.browser.refresh()
+        self.browser.get(url)
+        print('success')
+
     def run(self):
-        self.login()
+        self.admin_login()
 
 
 if __name__ == '__main__':
