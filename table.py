@@ -44,8 +44,8 @@ class Company(Base):
     address = Column(String(255), comment='公司地址')  # 公司地址
     introduction = Column(String(1000), comment='公司介绍')  # 公司介绍
     register_address = Column(String(255), comment='注册地址')  # 注册地址
-    business_scope = Column(String(1000), comment='经营范围')  # 经营范围
-    industry = Column(String(100), comment='行业')  # 行业
+    business_scope = Column(String(3000), comment='经营范围')  # 经营范围
+    industry = Column(String(100), comment='所属行业')  # 行业
     staff_size = Column(String(255), comment='人员规模')  # 人员规模
     former_name = Column(String(255), comment='曾用名')  # 曾用名
     business_term = Column(String(255), comment='营业期限')  # 营业期限
@@ -55,6 +55,13 @@ class Company(Base):
     shareholder_information = Column(String(255), comment='股东信息')  # 股东信息
     province = Column(String(20), comment='省份')
     city = Column(String(50), comment='市区')
+    the_social_code = Column(String(100), comment='统一社会信用代码')
+    registration_number = Column(String(100), comment='纳税人识别号')
+    register_number = Column(String(100), comment='注册号')
+    organizing_institution_bar_code = Column(String(100), comment='组织机构代码')
+    contributors_in = Column(String(20), comment='参保人数')
+    type_of_business = Column(String(255), comment='企业类型')
+    web_url = Column(String(255), comment='企业网址')
 
 
 if __name__ == '__main__':

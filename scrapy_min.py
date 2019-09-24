@@ -314,6 +314,7 @@ def qichacha_auto_search(ks: list = []):
     time.sleep(3)
     browse.close()
 
+
 def GBK2312():
     head = random.randint(0xb0, 0xf7)
     body = random.randint(0xa1, 0xfe)
