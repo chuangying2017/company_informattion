@@ -29,9 +29,9 @@ class AutomateChaCha:
     cookies: dict = {}
     chrome_options: object
 
-    def __init__(self):pass
-        # self.chrome_options = Options()
-        # self.browser = webdriver.Chrome(options=self.chrome_options)
+    def __init__(self):
+        self.chrome_options = Options()
+        self.browser = webdriver.Chrome(options=self.chrome_options)
 
     def login(self):
         """
@@ -47,13 +47,12 @@ class AutomateChaCha:
         action = ActionChains(self.browser)  # 实例化一个action对象
         action.click_and_hold(button).perform()  # 鼠标左键按下不放
         action.reset_actions()  # 清除之前的action
-        ttt = [23, 81, 204]
-        a = 0
+        ttt = [23, 81, 228]
+
         for i in ttt:
             action.move_by_offset(xoffset=i, yoffset=0).perform()  # 移动滑块
             action.reset_actions()
             time.sleep(0.4)
-            a += i
         action.release().perform()
         time.sleep(5)
         # 滑块，有刷新，有验证码
@@ -75,7 +74,6 @@ class AutomateChaCha:
                     action.move_by_offset(xoffset=t, yoffset=0).perform()
                     action.reset_actions()
                     time.sleep(0.4)
-                    a += t
                 action.release().perform()
                 time.sleep(5)
                 alert = self.browser.find_element_by_class_name('nc-lang-cnt').text
@@ -94,6 +92,7 @@ class AutomateChaCha:
                 # 登录完成后,将cookies保存到本地文件
                 with open("cookies.json", "w") as fp:
                     fp.write(jsonCookies)
+                print('登录完成后......')
             except Exception as e:
                 print(e, '出现异常啦')
 
@@ -159,7 +158,7 @@ class AutomateChaCha:
         pass
 
     def run(self):
-        self.data_import()
+        self.login()
 
 
 if __name__ == '__main__':
