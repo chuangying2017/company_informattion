@@ -35,6 +35,8 @@ class AutomateChaCha:
     home_url: str = 'https://www.qichacha.com/'
     cookies: dict = {}
     chrome_options: object
+    http_path: str = 'search'
+    search_key: str = 'key'
     headers: dict = {
         "Cookie": "QCCSESSID=csb0md62ha6vhiim8l4c390q04; UM_distinctid=16d1fb70247240-08b2c06aeb5191-7373e61-2a3000-16d1fb702488d3; _uab_collina=156819515061093531026689; acw_tc=b7f0d81615681951514382151eecbb97cf3adfd30dfb42bdfdf6ba931e; zg_did=%7B%22did%22%3A%20%2216d1fb703a334a-010890d039fa5e-7373e61-2a3000-16d1fb703a470e%22%7D; Hm_lvt_3456bee468c83cc63fb5147f119f1075=1569323239,1569374069,1569465437; hasShow=1; CNZZDATA1254842228=1885778088-1569322378-https%253A%252F%252Fsp0.baidu.com%252F%7C1569484158; Hm_lpvt_3456bee468c83cc63fb5147f119f1075=1569484450; zg_de1d1a35bfa24ce29bbf2c7eb17e6c4f=%7B%22sid%22%3A%201569483637466%2C%22updated%22%3A%201569485555864%2C%22info%22%3A%201569323237898%2C%22superProperty%22%3A%20%22%7B%7D%22%2C%22platform%22%3A%20%22%7B%7D%22%2C%22utm%22%3A%20%22%7B%7D%22%2C%22referrerDomain%22%3A%20%22www.qichacha.com%22%2C%22cuid%22%3A%20%22a240b361c35797710baddf45be188ad5%22%2C%22zs%22%3A%200%2C%22sc%22%3A%200%7D",
         "Connection": "keep-alive",
@@ -120,7 +122,9 @@ class AutomateChaCha:
                 print(e, '出现异常啦')
 
     def search_data(self, keyword: str):
-        pass
+        search_url = self.home_url + self.http_path
+        param: dict = {self.search_key: ''}
+        fetch_see_about = self.fetch_word()
 
     def download_excel(self):
         pass
