@@ -20,7 +20,6 @@ import openpyxl
 import xlrd
 import model
 
-
 """
 企查查 数据查询 根据时间查询 每个小月查询100次
 根据帐号每天 导出10次excel
@@ -50,6 +49,7 @@ class AutomateChaCha:
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36",
         "Sec-Fetch-User": "?1"
     }
+    record_prefix: str = 'already_search_word'
 
     def __init__(self):
         pass
@@ -131,34 +131,34 @@ class AutomateChaCha:
         res = []
         ls_res = self.path_easy(dir_path)
         data: list = []
+        ls_key = [
+            'company_name',
+            'status_quo',
+            'legal_representative',
+            'registered_capital',
+            'date_of_establishment',
+            'province',
+            'city',
+            'phone',
+            'more_phone',
+            'email',
+            'the_social_code',
+            'registration_number',
+            'register_number',
+            'organizing_institution_bar_code',
+            'contributors_in',
+            'type_of_business',
+            'industry',
+            'web_url',
+            'address',
+            'business_scope']
         for path in ls_res:
             workbook = xlrd.open_workbook(filename=path)
             worksheet = workbook.sheet_by_index(0)
             nrows = worksheet.nrows
             for row in range(2, nrows):
                 row = worksheet.row_values(row)
-                data.append({
-                    "company_name": row[0],
-                    'status_quo': row[1],
-                    'legal_representative': row[2],
-                    'registered_capital': row[3],
-                    'date_of_establishment': row[4],
-                    'province': row[5],
-                    'city': row[6],
-                    'phone': row[7],
-                    'more_phone': row[8],
-                    'email': row[9],
-                    'the_social_code': row[10],
-                    'registration_number': row[11],
-                    'register_number': row[12],
-                    'organizing_institution_bar_code': row[13],
-                    'contributors_in': row[14],
-                    'type_of_business': row[15],
-                    'industry': row[16],
-                    'web_url': row[17],
-                    'address': row[18],
-                    'business_scope': row[19]
-                })
+                data.append(dict(zip(ls_key, row)))
             result = model.create_all(data)
             if result:
                 shutil.move(path, source_path)
@@ -208,21 +208,38 @@ class AutomateChaCha:
     手动分析请求， 进行解析请求的方式！
     需要请求的url
     """
+
     def operation_manual(self):
         pass
 
-    def fetch_word(self):
+    def fetch_word(self, city_name: str = ''):
         """
         获取 中文词组库
         :return:
         """
+        city_list: list = []
         if not os.path.exists('zuci.txt'):
-            with open('city.txt', 'r') as citys, open('hanzi.txt', 'r') as cizu:
+            with open('city.txt', 'r') as citys, open('hanzi1.txt', 'r') as hanzi1, open('zuci.txt', 'w') as zuci:
                 city = citys.read().split(',')
-                ci_ls = cizu.read().split(',')
-            zuci_library: dict = {}
-            for cs in city:
-                pass
+                hanzi_ls = list(eval(hanzi1.read()))
+                zuci_library: dict = {}
+                for cs in city:
+                    city_ls: list = []
+                    for word in hanzi_ls:
+                        city_ls.append(cs + word)
+                    zuci_library[cs] = city_ls
+                zuci.write(json.dumps(zuci_library))
+                print(zuci_library.keys())
+                print('\n')
+                print(time.strftime('%H:%M:%S', time.localtime()))
+        else:
+            with open('zuci.txt') as zuci:
+                hanzi_zuci: dict = json.loads(zuci.read())
+
+            if city_name is '':
+                city_list: list = hanzi_zuci.get(list(hanzi_zuci.keys())[0])
+
+        return city_list
 
 
 if __name__ == '__main__':
