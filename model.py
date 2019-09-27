@@ -1,4 +1,4 @@
-from table import Company, init_connect, operation_complete
+from table import Company, init_connect, operation_complete, Citys
 
 
 def create(**kwargs):
@@ -65,3 +65,13 @@ def create_all(datas: list = []) -> bool:
     session.add_all(ls)
     operation_complete(session)
     return True
+
+
+def get_city() -> list:
+    session = init_connect()
+    all_ = list(map(lambda x: x.city, session.query(Citys).all()))
+    operation_complete(session)
+    return all_
+
+
+

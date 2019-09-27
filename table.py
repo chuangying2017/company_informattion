@@ -64,6 +64,15 @@ class Company(Base):
     web_url = Column(String(255), comment='企业网址')
 
 
+class Citys(Base):
+    __tablename__ = 'cities'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    cityid = Column(String(20), comment='城市id')
+    city = Column(String(50), comment='城市昵称')
+    provinceid = Column(String(20), comment='省份id')
+
+
 if __name__ == '__main__':
     Base.metadata.create_all(engine)
     session = init_connect()

@@ -21,6 +21,14 @@ import xlrd
 import model
 
 
+"""
+企查查 数据查询 根据时间查询 每个小月查询100次
+根据帐号每天 导出10次excel
+
+
+"""
+
+
 class AutomateChaCha:
     username: str = '15918750018'
     password: str = 'a123456789'
@@ -28,10 +36,25 @@ class AutomateChaCha:
     home_url: str = 'https://www.qichacha.com/'
     cookies: dict = {}
     chrome_options: object
+    headers: dict = {
+        "Cookie": "QCCSESSID=csb0md62ha6vhiim8l4c390q04; UM_distinctid=16d1fb70247240-08b2c06aeb5191-7373e61-2a3000-16d1fb702488d3; _uab_collina=156819515061093531026689; acw_tc=b7f0d81615681951514382151eecbb97cf3adfd30dfb42bdfdf6ba931e; zg_did=%7B%22did%22%3A%20%2216d1fb703a334a-010890d039fa5e-7373e61-2a3000-16d1fb703a470e%22%7D; Hm_lvt_3456bee468c83cc63fb5147f119f1075=1569323239,1569374069,1569465437; hasShow=1; CNZZDATA1254842228=1885778088-1569322378-https%253A%252F%252Fsp0.baidu.com%252F%7C1569484158; Hm_lpvt_3456bee468c83cc63fb5147f119f1075=1569484450; zg_de1d1a35bfa24ce29bbf2c7eb17e6c4f=%7B%22sid%22%3A%201569483637466%2C%22updated%22%3A%201569485555864%2C%22info%22%3A%201569323237898%2C%22superProperty%22%3A%20%22%7B%7D%22%2C%22platform%22%3A%20%22%7B%7D%22%2C%22utm%22%3A%20%22%7B%7D%22%2C%22referrerDomain%22%3A%20%22www.qichacha.com%22%2C%22cuid%22%3A%20%22a240b361c35797710baddf45be188ad5%22%2C%22zs%22%3A%200%2C%22sc%22%3A%200%7D",
+        "Connection": "keep-alive",
+        "Accept-Language": "zh-CN,zh;q=0.9",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3",
+        "Host": "www.qichacha.com",
+        "Referer": "https://www.qichacha.com/",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "same-origin",
+        "Upgrade-Insecure-Requests": 1,
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36",
+        "Sec-Fetch-User": "?1"
+    }
 
     def __init__(self):
-        self.chrome_options = Options()
-        self.browser = webdriver.Chrome(options=self.chrome_options)
+        pass
+        # self.chrome_options = Options()
+        # self.browser = webdriver.Chrome(options=self.chrome_options)
 
     def login(self):
         """
@@ -148,7 +171,8 @@ class AutomateChaCha:
         ls: list = []
         for main_dir, subdir, file_name_list in os.walk(dir_path):
             for file in file_name_list:
-                ls.append(os.path.join(main_dir, file))
+                if file.find('xls') >= 0:
+                    ls.append(os.path.join(main_dir, file))
         return ls
 
     def data_export(self):
@@ -178,7 +202,27 @@ class AutomateChaCha:
         print('success')
 
     def run(self):
-        self.admin_login()
+        self.fetch_word()
+
+    """
+    手动分析请求， 进行解析请求的方式！
+    需要请求的url
+    """
+    def operation_manual(self):
+        pass
+
+    def fetch_word(self):
+        """
+        获取 中文词组库
+        :return:
+        """
+        if not os.path.exists('zuci.txt'):
+            with open('city.txt', 'r') as citys, open('hanzi.txt', 'r') as cizu:
+                city = citys.read().split(',')
+                ci_ls = cizu.read().split(',')
+            zuci_library: dict = {}
+            for cs in city:
+                pass
 
 
 if __name__ == '__main__':
