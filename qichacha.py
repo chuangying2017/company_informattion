@@ -47,14 +47,15 @@ class AutomateChaCha:
         "Referer": "https://www.qichacha.com/",
         "Sec-Fetch-Mode": "navigate",
         "Sec-Fetch-Site": "same-origin",
-        "Upgrade-Insecure-Requests": 1,
+        "Upgrade-Insecure-Requests": '1',
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36",
         "Sec-Fetch-User": "?1"
     }
     record_prefix: str = 'already_search_word'
 
     def __init__(self):
-        pass
+        self.session = requests.session()
+        self.session.headers.update(self.headers)
         # self.chrome_options = Options()
         # self.browser = webdriver.Chrome(options=self.chrome_options)
 
@@ -123,8 +124,15 @@ class AutomateChaCha:
 
     def search_data(self, keyword: str):
         search_url = self.home_url + self.http_path
-        param: dict = {self.search_key: ''}
-        fetch_see_about = self.fetch_word()
+        params: dict = {self.search_key: keyword}
+        try:
+            res = self.session.get(search_url, params=params)
+            res_collect = res.status_code
+            if res_collect == 200:
+                res_collect = res.text
+            return res_collect
+        except requests.ConnectionError as r_err:
+            print(r_err)
 
     def download_excel(self):
         pass
@@ -206,7 +214,7 @@ class AutomateChaCha:
         print('success')
 
     def run(self):
-        self.fetch_word()
+        self.search_data('东莞日')
 
     """
     手动分析请求， 进行解析请求的方式！
@@ -242,10 +250,12 @@ class AutomateChaCha:
 
             if city_name is '':
                 city_list: list = hanzi_zuci.get(list(hanzi_zuci.keys())[0])
+            else:
+                city_list: list = hanzi_zuci.get(city_name, [])
 
         return city_list
 
 
 if __name__ == '__main__':
     chacha = AutomateChaCha()
-    chacha.run()
+    print(chacha.run())
