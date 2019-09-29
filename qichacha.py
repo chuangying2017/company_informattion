@@ -79,7 +79,7 @@ class AutomateChaCha:
         if not os.path.exists(self.log_path):
             os.mkdir(self.log_path)
 
-        logging.basicConfig(filename=log_src, level=logging.DEBUG)
+        logging.basicConfig(filename=log_src, level=logging.DEBUG, format='%(asctime)s %(message)s')
 
     def login(self):
         """
@@ -233,7 +233,18 @@ class AutomateChaCha:
         pass
 
     def combination_keyword(self):
-        pass
+        current_dir = './account/'
+        if not os.path.exists(current_dir):
+            os.mkdir(current_dir)
+
+        account_record = current_dir + (self.record_prefix+self.username)
+
+        if not os.path.exists(account_record):
+            with open(account_record, 'w') as ws:
+                pass
+        else:
+            with open(account_record, 'r+') as ws:
+                pass
 
     def admin_login(self):
         url = 'http://awpo.com.cn/admin/index'
