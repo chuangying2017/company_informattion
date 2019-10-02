@@ -255,13 +255,27 @@ class AutomateChaCha:
                 already_for_search: list = word_list['already_for_search']
         one_hours = self.each_hours * 60 * 60  # 得到一小时的秒数
         query_request_num = self.hours_query_num  # 一小时执行的次数
+        hours: list = []
         #  先准备到要循环好的数组
         while wait_for_search:
+            if not hours:
+                hours = self.rand_array(one_hours, query_request_num)
             search_word = wait_for_search.pop()
             search_result = self.search_data(search_word)
             self.init_log()
-            logging.info(search_result)
+            if search_result.isdecimal():
+                logging.info(search_result)
+            else:
+                parse_result = self.parse_text(search_result, search_word)
+                if type(parse_result) == bool:
+                    self.download_num -= 1
+                logging.info(parse_result)
             already_for_search.append(search_word)
+            if self.download_num < 1:
+                logging.info('all download done...!')
+                break
+            wait_time = hours.pop()
+            time.sleep(wait_time)
 
     def rand_array(self, second_num, query_num):
         """
