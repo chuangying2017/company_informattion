@@ -53,7 +53,7 @@ class AutomateChaCha:
         "Sec-Fetch-User": "?1"
     }
     record_prefix: str = 'already_search_word'
-    num_condition: int = 500
+    num_condition: int = 500  # 如果搜索到的数据大于等于500就下载 下来
     xls_storage_import: str = './xls/not_import/'
     xls_storage_export: str = './xls/already_export/'
     download_num: int = 10
@@ -237,14 +237,54 @@ class AutomateChaCha:
         if not os.path.exists(current_dir):
             os.mkdir(current_dir)
 
-        account_record = current_dir + (self.record_prefix+self.username)
-
+        account_record = current_dir + (self.record_prefix+self.username) + '.txt'
+        already_for_search: list = []
         if not os.path.exists(account_record):
             with open(account_record, 'w') as ws:
-                pass
+                word_list = self.fetch_word()
+                ws.write(json.dumps({
+                    "city": word_list[0],
+                    "wait_for_search": word_list[1],
+                    "already_for_search": []
+                }))
+                wait_for_search = word_list[1]
         else:
-            with open(account_record, 'r+') as ws:
-                pass
+            with open(account_record, 'r') as ws:
+                word_list = json.loads(ws.read())
+                wait_for_search = word_list['wait_for_search']
+                already_for_search: list = word_list['already_for_search']
+        one_hours = self.each_hours * 60 * 60  # 得到一小时的秒数
+        query_request_num = self.hours_query_num  # 一小时执行的次数
+        #  先准备到要循环好的数组
+        while wait_for_search:
+            search_word = wait_for_search.pop()
+            search_result = self.search_data(search_word)
+            self.init_log()
+            logging.info(search_result)
+            already_for_search.append(search_word)
+
+    def rand_array(self, second_num, query_num):
+        """
+        随机根据已经条件 做出一些 随机数
+        根据一个小时的秒数做出的随机数
+        每次都会有一个最小值 与 最大的值相比较不能大于 或者小于 这个值 之间来回
+        :param second_num:
+        :param query_num:
+        :return:
+        """
+        min_query_second = second_num / query_num  # 得到最小值的执行次数 每次请求间隔不能超过36秒
+        last_query_second = 1  # 最低的间隔时间是1秒
+        storage_rand_num: list = []
+        for i in range(query_num):
+            while True:
+                val_ = random.randint(last_query_second, min_query_second)
+                if val_ > min_query_second or val_ < last_query_second:
+                    continue
+                storage_rand_num.append(val_)
+                break
+
+        ''' 就地取材 '''
+        return storage_rand_num
 
     def admin_login(self):
         url = 'http://awpo.com.cn/admin/index'
@@ -329,7 +369,7 @@ class AutomateChaCha:
 
         city_list: list = zuci_library.get(city_name, [])
 
-        return city_list
+        return city_name, city_list
 
 
 if __name__ == '__main__':
